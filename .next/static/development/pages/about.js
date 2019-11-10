@@ -19321,21 +19321,29 @@ function (_React$Component) {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 29
           },
           __self: this
-        }, article.fields.title);
+        }, __jsx("img", {
+          src: article.fields.featuredImage.fields.file.url,
+          alt: "",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        }), article.fields.title);
       });
       return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 36
         },
         __self: this
       }, ass, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 38
         },
         __self: this
       }, "This is the about page"));

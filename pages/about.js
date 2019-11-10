@@ -25,7 +25,12 @@ export default class About extends React.Component {
   render() {
     const ass = this.state.articles.map((article, i) => {
       console.log(article);
-      return <div key={i}>{article.fields.title}</div>;
+      return (
+        <div key={i}>
+          <img src={article.fields.featuredImage.fields.file.url} alt='' />
+          {article.fields.title}
+        </div>
+      );
     });
     return (
       <Layout>
