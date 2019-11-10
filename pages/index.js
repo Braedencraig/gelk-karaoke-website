@@ -2,19 +2,11 @@ import Layout from '../components/MyLayout';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Button from '@material-ui/core/Button';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import TestHeader from '../components/TestHeader';
 
 const Index = props => (
   <Layout>
-    <AppBar position='static'>
-      <Tabs>
-        <Tab label='Item One' />
-        <Tab label='Item Two' />
-        <Tab label='Item Three' />
-      </Tabs>
-    </AppBar>
+    <TestHeader />
     <Button variant='contained' color='primary'>
       Hello World
     </Button>
