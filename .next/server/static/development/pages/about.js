@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1957,25 +1957,65 @@ var _jsxFileName = "/Users/braedencraig/Desktop/GELK-SITE/pages/about.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function About() {
-  return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, "This is the about page"));
+
+const contentful = __webpack_require__(/*! contentful */ "contentful");
+
+class About extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      articles: []
+    };
+  }
+
+  componentDidMount() {
+    const client = contentful.createClient({
+      // This is the space ID. A space is like a project folder in Contentful terms
+      space: 'sqmp3jmwaedr',
+      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+      accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU'
+    });
+    client.getEntries({
+      content_type: 'post'
+    }).then(response => {
+      this.setState({
+        articles: response.items
+      });
+    });
+  }
+
+  render() {
+    const ass = this.state.articles.map((article, i) => {
+      console.log(article);
+      return __jsx("div", {
+        key: i,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, article.fields.title);
+    });
+    return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, ass, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, "This is the about page"));
+  }
+
 }
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/
@@ -1984,6 +2024,17 @@ function About() {
 
 module.exports = __webpack_require__(/*! /Users/braedencraig/Desktop/GELK-SITE/pages/about.js */"./pages/about.js");
 
+
+/***/ }),
+
+/***/ "contentful":
+/*!*****************************!*\
+  !*** external "contentful" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("contentful");
 
 /***/ }),
 

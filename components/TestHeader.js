@@ -6,7 +6,7 @@ const TestHeader = () => (
       <nav className='wrapper'>
         <div className='logo'></div>
         <input type='checkbox' id='menu-toggle' />
-        <label for='menu-toggle' className='label-toggle'></label>
+        <label htmlFor='menu-toggle' className='label-toggle'></label>
         <ul>
           <li>
             <Link href='/about'>
