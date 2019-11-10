@@ -19303,10 +19303,14 @@ function (_React$Component) {
         space: 'sqmp3jmwaedr',
         // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
         accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU'
-      });
+      }); // content type relates to the content type name in contentful
+      // figured it outttt
+
       client.getEntries({
-        content_type: 'post'
+        content_type: 'songList'
       }).then(function (response) {
+        console.log(response);
+
         _this2.setState({
           articles: response.items
         });
@@ -19321,29 +19325,21 @@ function (_React$Component) {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 32
           },
           __self: this
-        }, __jsx("img", {
-          src: article.fields.featuredImage.fields.file.url,
-          alt: "",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 30
-          },
-          __self: this
-        }), article.fields.title);
+        });
       });
       return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 39
         },
         __self: this
       }, ass, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 41
         },
         __self: this
       }, "This is the about page"));

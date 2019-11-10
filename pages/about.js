@@ -16,7 +16,10 @@ export default class About extends React.Component {
       // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
       accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
     });
-    client.getEntries({ content_type: 'post' }).then(response => {
+    // content type relates to the content type name in contentful
+    // figured it outttt
+    client.getEntries({ content_type: 'songList' }).then(response => {
+      console.log(response);
       this.setState({
         articles: response.items,
       });
@@ -27,8 +30,8 @@ export default class About extends React.Component {
       console.log(article);
       return (
         <div key={i}>
-          <img src={article.fields.featuredImage.fields.file.url} alt='' />
-          {article.fields.title}
+          {/* <img src={article.fields.featuredImage.fields.file.url} alt='' />
+          {article.fields.title} */}
         </div>
       );
     });

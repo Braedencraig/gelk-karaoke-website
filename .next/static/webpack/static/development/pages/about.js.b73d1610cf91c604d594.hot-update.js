@@ -59,8 +59,10 @@ function (_React$Component) {
         accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU'
       });
       client.getEntries({
-        content_type: 'post'
+        content_type: 'songList'
       }).then(function (response) {
+        console.log(response);
+
         _this2.setState({
           articles: response.items
         });
@@ -75,29 +77,21 @@ function (_React$Component) {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
-          },
-          __self: this
-        }, __jsx("img", {
-          src: article.fields.featuredImage.fields.file.url,
-          alt: "",
-          __source: {
-            fileName: _jsxFileName,
             lineNumber: 30
           },
           __self: this
-        }), article.fields.title);
+        });
       });
       return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 37
         },
         __self: this
       }, ass, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
       }, "This is the about page"));
@@ -112,4 +106,4 @@ function (_React$Component) {
 /***/ })
 
 })
-//# sourceMappingURL=about.js.e40b6c613715d5143387.hot-update.js.map
+//# sourceMappingURL=about.js.b73d1610cf91c604d594.hot-update.js.map
