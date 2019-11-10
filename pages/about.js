@@ -1,5 +1,6 @@
 import Layout from '../components/MyLayout';
 const contentful = require('contentful');
+import TestHeader from '../components/TestHeader';
 
 export default class About extends React.Component {
   constructor(props) {
@@ -18,7 +19,8 @@ export default class About extends React.Component {
     });
     // content type relates to the content type name in contentful
     // figured it outttt
-    client.getEntries({ content_type: 'songList' }).then(response => {
+    // 'post' instead of songList, post is linked to author so when post response you get author object as well
+    client.getEntries({ content_type: 'post' }).then(response => {
       console.log(response);
       this.setState({
         articles: response.items,
@@ -30,8 +32,8 @@ export default class About extends React.Component {
       console.log(article);
       return (
         <div key={i}>
-          {/* <img src={article.fields.featuredImage.fields.file.url} alt='' />
-          {article.fields.title} */}
+          <img src={article.fields.featuredImage.fields.file.url} alt='' />
+          {article.fields.title}
         </div>
       );
     });

@@ -6,8 +6,7 @@ import TestHeader from '../components/TestHeader';
 
 const Index = props => (
   <Layout>
-    <TestHeader />
-    <Button variant='contained' color='primary'>
+    {/* <Button variant='contained' color='primary'>
       Hello World
     </Button>
     <h1>Batman TV Shows</h1>
@@ -19,7 +18,7 @@ const Index = props => (
           </Link>
         </li>
       ))}
-    </ul>
+    </ul> */}
     <style jsx>{`
       h1,
       a {
