@@ -3,9 +3,11 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Button from '@material-ui/core/Button';
 import TestHeader from '../components/TestHeader';
+import NeonLogo from '../components/NeonLogo';
 
 const Index = props => (
   <Layout>
+    <NeonLogo />
     {/* <Button variant='contained' color='primary'>
       Hello World
     </Button>

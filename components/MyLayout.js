@@ -1,6 +1,7 @@
 import Header from './Header';
 import TestHeader from '../components/TestHeader';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 
 const layoutStyle = {
   margin: -9,
@@ -22,6 +23,7 @@ const Layout = props => (
     <div style={layoutStyle}>
       <TestHeader />
       {props.children}
+      <Footer />
     </div>
   </>
 );
