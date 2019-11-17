@@ -7,6 +7,10 @@ const layoutStyle = {
   margin: -9,
   background: 'black',
   height: '100vh',
+  background:
+    '#000 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)  center no-repeat',
+  backgroundSize: 'cover',
+  margin: 0,
 };
 
 const Layout = props => (
@@ -18,12 +22,15 @@ const Layout = props => (
     <style jsx global>{`
       body {
         background: #000;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
     `}</style>
     <div style={layoutStyle}>
       <TestHeader />
       {props.children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   </>
 );
