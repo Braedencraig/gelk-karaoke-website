@@ -1,16 +1,32 @@
 import Layout from '../components/MyLayout';
-import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Button from '@material-ui/core/Button';
 import TestHeader from '../components/TestHeader';
 import NeonLogo from '../components/NeonLogo';
+import * as Scroll from 'react-scroll';
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from 'react-scroll';
 
 const Index = props => (
   <Layout>
     <NeonLogo />
 
     <div className='chevron'>
-      <a href='#scroll'>
+      <Link
+        className='test6'
+        to='scroll'
+        spy={true}
+        smooth={true}
+        duration={500}
+      >
+        {/* <a href={`#${letter}`}>{letter}</a> */}
+        {/* <a href='#scroll'> */}
         <svg
           height='50px'
           width='50px'
@@ -25,7 +41,8 @@ const Index = props => (
             d='M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M15.2928932,9.29289322 L16.7071068,10.7071068 L12,15.4142136 L7.29289322,10.7071068 L8.70710678,9.29289322 L12,12.5857864 L15.2928932,9.29289322 Z'
           ></path>
         </svg>
-      </a>
+        {/* </a> */}
+      </Link>
     </div>
     <style jsx>{`
       h1,

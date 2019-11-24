@@ -116,12 +116,7 @@ export default class List extends React.Component {
               );
             })}
           </p>
-          <div className='list'>
-            {list}
-            {/* <div id='anchor' className='element'>
-              test 6 (anchor)
-            </div> */}
-          </div>
+          <div className='list'>{list}</div>
         </div>
         <style jsx>{`
           h1 {
