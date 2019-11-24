@@ -47,6 +47,11 @@ const TestHeader = () => (
             </Link>
           </li>
           <li>
+            <Link href='/shows'>
+              <a>Shows</a>
+            </Link>
+          </li>
+          <li>
             <Link href='/list'>
               <a>Song List</a>
             </Link>
