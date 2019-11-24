@@ -27,10 +27,6 @@
     "/list": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/shows": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

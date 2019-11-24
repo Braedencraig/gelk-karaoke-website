@@ -1,6 +1,15 @@
 import Layout from '../components/MyLayout';
 const contentful = require('contentful');
 import TestHeader from '../components/TestHeader';
+import * as Scroll from 'react-scroll';
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from 'react-scroll';
 
 export default class List extends React.Component {
   constructor(props) {
@@ -74,6 +83,7 @@ export default class List extends React.Component {
                         }
                         p {
                           color: white;
+                          font-family: Oswald;
                         }
                       `}</style>
                     </div>
@@ -93,12 +103,25 @@ export default class List extends React.Component {
             {this.state.alphabet.map((letter, i) => {
               return (
                 <h3>
-                  <a href={`#${letter}`}>{letter}</a>
+                  <Link
+                    className='test6'
+                    to={letter}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
+                    <a href={`#${letter}`}>{letter}</a>
+                  </Link>
                 </h3>
               );
             })}
           </p>
-          <div className='list'>{list}</div>
+          <div className='list'>
+            {list}
+            {/* <div id='anchor' className='element'>
+              test 6 (anchor)
+            </div> */}
+          </div>
         </div>
         <style jsx>{`
           h1 {

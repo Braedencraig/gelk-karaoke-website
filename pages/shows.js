@@ -36,10 +36,11 @@ export default class Shows extends React.Component {
           return this.state.shows.map((shows, i) => {
             return shows.fields.shows.content.map((shows, i) => {
               return (
-                <a href={links.value}>
-                  {' '}
-                  <p>{shows.content[0].value}</p>
-                </a>
+                <>
+                  <Link href={{ pathname: `${links.value}` }}>
+                    <a>{shows.content[0].value}</a>
+                  </Link>
+                </>
               );
             });
           });
@@ -52,9 +53,6 @@ export default class Shows extends React.Component {
         <div className='listWrapper'>
           <h1 className='contactNeon'>UPCOMING SHOWS</h1>
           <div className='shows'>{shows}</div>
-          <Link href={{ pathname: 'https://google.ca' }}>
-            <a>here</a>
-          </Link>
         </div>
         <style jsx>{`
           h1 {

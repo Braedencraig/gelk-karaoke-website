@@ -23964,7 +23964,7 @@ var Index = function Index(props) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!*********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fbraedencraig%2FDesktop%2FGELK-SITE%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************/
@@ -23987,5 +23987,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
