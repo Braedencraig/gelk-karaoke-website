@@ -19,6 +19,7 @@ export default class About extends React.Component {
                 <input type='text' name='' autocomplete='off' required />
                 <label for='name'>
                   <span>Name</span>
+                  <span>sing@goodenoughlivekaraoke.com</span>
                 </label>
               </fieldset>
               <fieldset>

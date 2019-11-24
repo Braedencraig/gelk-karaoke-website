@@ -95,6 +95,7 @@ const TestHeader = _ => {
    
     @import url(//fonts.googleapis.com/css?family=Vibur);
     @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 
     .navBar {
           transition: background-color 0.2s;

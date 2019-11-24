@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 const layoutStyle = {
   margin: -9,
   background: 'black',
-  height: '100vh',
+  height: '150vh',
   background:
-    '#000 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)  center no-repeat',
+    '#000 url(https://i.etsystatic.com/9125312/r/il/fc23d1/563516299/il_570xN.563516299_hy4m.jpg)  center no-repeat',
   backgroundSize: 'cover',
   margin: 0,
 };
@@ -30,7 +30,7 @@ const Layout = props => (
     <div style={layoutStyle}>
       <TestHeader />
       {props.children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   </>
 );

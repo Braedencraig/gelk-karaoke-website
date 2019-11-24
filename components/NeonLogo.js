@@ -10,6 +10,8 @@ const NeonLogo = () => (
     <style jsx>{`
       @import url(//fonts.googleapis.com/css?family=Vibur);
       @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
       .logoNeon {
         text-align: center;
         width: 65%;
@@ -23,7 +25,7 @@ const NeonLogo = () => (
         user-select: none;
       }
       .logoNeon b {
-        font: 400 19vh 'Vibur';
+        font: 400 19vh 'Monoton';
         color: #fee;
         text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
           0 0 0.1em #ff4444, 0 10px 3px #000;
