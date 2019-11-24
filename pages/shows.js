@@ -1,6 +1,7 @@
 import Layout from '../components/MyLayout';
 const contentful = require('contentful');
 import TestHeader from '../components/TestHeader';
+import Link from 'next/link';
 
 export default class Shows extends React.Component {
   constructor(props) {
@@ -29,16 +30,20 @@ export default class Shows extends React.Component {
     });
   }
   render() {
-    const links = this.state.links.map((links, i) => {
+    const shows = this.state.links.map((links, i) => {
       return links.fields.link.content.map((links, i) => {
         return links.content.map((links, i) => {
-          return <a href={links.value}>asdas</a>;
+          return this.state.shows.map((shows, i) => {
+            return shows.fields.shows.content.map((shows, i) => {
+              return (
+                <a href={links.value}>
+                  {' '}
+                  <p>{shows.content[0].value}</p>
+                </a>
+              );
+            });
+          });
         });
-      });
-    });
-    const shows = this.state.shows.map((shows, i) => {
-      return shows.fields.shows.content.map((shows, i) => {
-        return <p>{shows.content[0].value}</p>;
       });
     });
 
@@ -46,11 +51,10 @@ export default class Shows extends React.Component {
       <Layout>
         <div className='listWrapper'>
           <h1 className='contactNeon'>UPCOMING SHOWS</h1>
-          <div className='shows'>
-            {shows}
-            {links}
-          </div>
-          <a href={links}></a>
+          <div className='shows'>{shows}</div>
+          <Link href={{ pathname: 'https://google.ca' }}>
+            <a>here</a>
+          </Link>
         </div>
         <style jsx>{`
           h1 {
