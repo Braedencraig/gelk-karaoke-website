@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 const layoutStyle = {
   margin: -9,
   background: 'black',
-  height: '150vh',
   backgroundColor: '#282a2b',
   backgroundSize: 'cover',
   margin: 0,

@@ -97,10 +97,6 @@ const TestHeader = _ => {
     @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 
-    svg:hover {
-      fill: #ff0;
-    }
-
     .navBar {
           transition: background-color 0.2s;
         }
