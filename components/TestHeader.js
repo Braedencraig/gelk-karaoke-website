@@ -97,11 +97,15 @@ const TestHeader = _ => {
     @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 
+    svg:hover {
+      fill: #ff0;
+    }
+
     .navBar {
           transition: background-color 0.2s;
         }
         .navBar.scrolled {
-          background-color: rgba(0, 0, 0, 0.9);
+          background-color: rgba(54,56,57, 0.9);
         }
 
       .singMan {
@@ -117,6 +121,8 @@ const TestHeader = _ => {
         position: fixed;
         right: 0;
         left: 0;
+        padding: 20px 0;
+        z-index: 3;
       }
 
       .logo {
@@ -149,7 +155,7 @@ const TestHeader = _ => {
 
       nav ul a {
         font-family: 'Oswald';
-        color: white;
+        color: #dddddd;
         text-decoration: none;
         transition: all 0.5s ease;
       }

@@ -7,8 +7,7 @@ const layoutStyle = {
   margin: -9,
   background: 'black',
   height: '150vh',
-  background:
-    '#000 url(https://i.etsystatic.com/9125312/r/il/fc23d1/563516299/il_570xN.563516299_hy4m.jpg)  center no-repeat',
+  backgroundColor: '#282a2b',
   backgroundSize: 'cover',
   margin: 0,
 };
