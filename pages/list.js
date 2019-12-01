@@ -129,8 +129,8 @@ export default class List extends React.Component {
             font-weight: 100;
             text-align: center;
             color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-              0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em limegreen,
+              0 0 0.5em limegreen, 0 0 0.1em limegreen, 0 10px 3px #000;
           }
           .listWrapper {
             margin-top: 25vh;
@@ -152,6 +152,7 @@ export default class List extends React.Component {
             margin: 50px 0;
             position: sticky;
             top: 100px;
+            background: rgba(40, 42, 43, 0.9);
           }
           p {
             color: white;
@@ -165,8 +166,8 @@ export default class List extends React.Component {
             text-transform: uppercase;
             margin: 10px;
             color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-              0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em limegreen,
+              0 0 0.5em limegreen, 0 0 0.1em limegreen, 0 10px 3px #000;
           }
 
           a:hover {

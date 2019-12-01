@@ -20,7 +20,6 @@ import {
 const Index = props => (
   <Layout>
     <NeonLogo />
-
     <div className='chevron'>
       <Link className='test6' to='text' spy={true} smooth={true} duration={500}>
         <svg
@@ -85,9 +84,10 @@ const Index = props => (
       }
     `}</style>
     <>
-      <Carousel />
+      <div id='text'></div>
+      <Carousel id='text' />
 
-      <div className='introText' id='text'>
+      <div className='introText'>
         <h2>We play, YOU SING!&trade;</h2>
         <p>
           Good Enough Live Karaoke is Toronto's most popular live band karaoke

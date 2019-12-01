@@ -64,7 +64,7 @@ const TestHeader = _ => {
             </li>
             <li>
               <Link href='/about'>
-                <a>About</a>
+                <a>Testimonials</a>
               </Link>
             </li>
             <li>

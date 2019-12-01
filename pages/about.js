@@ -31,21 +31,6 @@ export default class About extends React.Component {
     const about = this.state.about.map((about, i) => {
       return (
         <>
-          <div className='image'>
-            <img
-              src={about.fields.founder.fields.file.url}
-              alt='An image of the founder of Good Enough Live Karaoke, Mr. Tim McCready'
-            />
-          </div>
-          <div key={i}>
-            <p>{about.fields.aboutText.content[0].content[0].value}</p>
-            <p>{about.fields.aboutText.content[1].content[0].value}</p>
-            <p>{about.fields.aboutText.content[2].content[0].value}</p>
-            <h3>{about.fields.aboutText.content[3].content[0].value}</h3>
-            <p>{about.fields.aboutText.content[4].content[0].value}</p>
-            <p>{about.fields.aboutText.content[5].content[0].value}</p>
-            <p>{about.fields.aboutText.content[6].content[0].value}</p>
-          </div>
           <style jsx>{`
             p,
             h3 {
@@ -86,21 +71,27 @@ export default class About extends React.Component {
     return (
       <Layout>
         <div className='wrapper'>
-          <h1 className='contactNeon'>ABOUT</h1>
+          <h1 className='contactNeon'>TESTIMONIALS</h1>
           {about}
+          <p>
+            dynamically import list of clients so that jenn can update as she
+            wants.
+          </p>
+          <p>include a carousel of logos and specific endorsements</p>
           <style jsx>{`
+            @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
             h1 {
               white-space: nowrap;
               margin: 0 -5px 0 0;
               letter-spacing: 5px;
               line-height: 1;
               font-size: 7vw;
-              font-family: vibur;
+              font-family: Quicksand;
               font-weight: 100;
               text-align: center;
               color: #fee;
-              text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-                0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+              text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em blue, 0 0 0.5em blue,
+                0 0 0.1em blue, 0 10px 3px #000;
             }
 
             .wrapper {
