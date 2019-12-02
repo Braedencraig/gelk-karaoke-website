@@ -7,61 +7,60 @@ export default class About extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      about: [],
+      testimonials: [],
     };
   }
 
+  componentDidMount() {
+    const client = contentful.createClient({
+      // This is the space ID. A space is like a project folder in Contentful terms
+      space: 'sqmp3jmwaedr',
+      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+      accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
+    });
+    // content type relates to the content type name in contentful
+    // figured it outttt
+    // 'post' instead of songList, post is linked to author so when post response you get author object as well
+    client.getEntries({ content_type: 'about' }).then(response => {
+      this.setState({
+        testimonials: response.items,
+      });
+    });
+  }
+
   render() {
-    const about = this.state.about.map((about, i) => {
-      return (
-        <>
-          <style jsx>{`
-            p,
-            h3 {
-              color: white;
-              font-family: Oswald;
-              font-size: 20px;
-            }
-
-            p {
-              width: 80%;
-              margin: 3% auto;
-            }
-
-            h3 {
-              width: 80%;
-              margin: 0 auto;
-              text-align: center;
-            }
-            img {
-              width: 100%;
-              height: auto;
-            }
-
-            .image {
-              width: 50%;
-              margin: 5% auto;
-              -moz-box-shadow: inset 0 0 10px #000000;
-              -webkit-box-shadow: inset 0 0 10px #000000;
-              box-shadow: inset 0 0 10px #000000;
-              border: 15px solid #000;
-              border-radius: 10px;
-            }
-          `}</style>
-        </>
-      );
+    const testimonials = this.state.testimonials.map((testimonials, i) => {
+      if (this.state.testimonials[0]) {
+        return testimonials.fields.largeTestimonials.content[0].content.map(
+          (testimonials, i) => {
+            // console.log(testimonials.content[0].content);
+            return (
+              <>
+                <div>
+                  <p>{testimonials.content[0].content[0].value}</p>
+                  <p>{testimonials.content[0].content[1].value}</p>
+                </div>
+                <style jsx>{`
+                  p {
+                    font-family: Oswald, cursive;
+                    font-size: 24px;
+                    color: white;
+                    width: 80%;
+                    margin: 25px auto;
+                  }
+                `}</style>
+              </>
+            );
+          },
+        );
+      }
     });
 
     return (
       <Layout>
         <div className='wrapper'>
           <h1 className='contactNeon'>TESTIMONIALS</h1>
-          {/* {about} */}
-          <p>
-            contentful OTHER TESTIMONIALS IN A BIG RICH TEXT DOCUMENT SO IT CAN
-            BE EDITED
-          </p>
-          <p>put scroll back to top on footer.</p>
+          {testimonials}
           <h2 className='clientTitle'>CLIENTS</h2>
           <ClientImages />
           <style jsx>{`
@@ -79,6 +78,10 @@ export default class About extends React.Component {
               color: #fee;
               text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em blue, 0 0 0.5em blue,
                 0 0 0.1em blue, 0 10px 3px #000;
+            }
+
+            h1 {
+              margin-bottom: 50px;
             }
 
             .wrapper {

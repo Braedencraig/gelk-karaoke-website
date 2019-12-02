@@ -40,10 +40,11 @@ class ClientImages extends React.Component {
 
         <style jsx>{`
           .clientImages img {
-            width: 200px;
-            height: 150px;
+            width: 100px;
+            height: 70px;
             border: none;
             border-radius: 5px;
+            padding: 10px;
           }
 
           .clientImages {
