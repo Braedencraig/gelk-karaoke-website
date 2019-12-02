@@ -1,5 +1,6 @@
 import Layout from '../components/MyLayout';
 const contentful = require('contentful');
+import ClientImages from '../components/ClientImages';
 import TestHeader from '../components/TestHeader';
 
 export default class About extends React.Component {
@@ -10,23 +11,6 @@ export default class About extends React.Component {
     };
   }
 
-  componentDidMount() {
-    const client = contentful.createClient({
-      // This is the space ID. A space is like a project folder in Contentful terms
-      space: 'sqmp3jmwaedr',
-      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-      accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
-    });
-    // content type relates to the content type name in contentful
-    // figured it outttt
-    // 'post' instead of songList, post is linked to author so when post response you get author object as well
-    client.getEntries({ content_type: 'about' }).then(response => {
-      this.setState({
-        about: response.items,
-      });
-      console.log(response.items);
-    });
-  }
   render() {
     const about = this.state.about.map((about, i) => {
       return (
@@ -72,15 +56,18 @@ export default class About extends React.Component {
       <Layout>
         <div className='wrapper'>
           <h1 className='contactNeon'>TESTIMONIALS</h1>
-          {about}
+          {/* {about} */}
           <p>
-            dynamically import list of clients so that jenn can update as she
-            wants.
+            contentful OTHER TESTIMONIALS IN A BIG RICH TEXT DOCUMENT SO IT CAN
+            BE EDITED
           </p>
-          <p>include a carousel of logos and specific endorsements</p>
+          <p>put scroll back to top on footer.</p>
+          <h2 className='clientTitle'>CLIENTS</h2>
+          <ClientImages />
           <style jsx>{`
             @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-            h1 {
+            h1,
+            h2 {
               white-space: nowrap;
               margin: 0 -5px 0 0;
               letter-spacing: 5px;
@@ -96,6 +83,10 @@ export default class About extends React.Component {
 
             .wrapper {
               margin-top: 20vh;
+            }
+
+            .clientTitle {
+              margin-bottom: 50px;
             }
           `}</style>
         </div>
