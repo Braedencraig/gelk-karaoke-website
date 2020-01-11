@@ -63,8 +63,7 @@ export default class About extends React.Component {
           </div>
         </div>
         <style jsx>{`
-          @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
-          @import url('https://fonts.googleapis.com/css?family=Delius&display=swap');
+          @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
 
           .flex {
             display: flex;
@@ -72,14 +71,14 @@ export default class About extends React.Component {
           }
 
           p {
-            color: white;
-            font-family: Oswald;
+            color: f1f1f1;
+            font-family: 'Roboto', sans-serif;
             font-size: 26px;
             line-height: 50px;
           }
 
           a {
-            color: white;
+            color: #f1f1f1;
             transition: 0.4s all;
           }
 
@@ -112,7 +111,7 @@ export default class About extends React.Component {
             letter-spacing: 5px;
             line-height: 1;
             font-size: 7vw;
-            font-family: Delius;
+            font-family: 'Roboto', sans-serif;
             font-weight: 100;
             text-align: center;
             color: #fee;
@@ -178,7 +177,7 @@ export default class About extends React.Component {
           /* label styling */
           label {
             position: absolute;
-            font-family: Oswald;
+            font-family: 'Roboto', sans-serif;
             color: #fee;
             height: 100%;
             width: 100%;
@@ -252,7 +251,7 @@ export default class About extends React.Component {
             padding: 20px;
             letter-spacing: 2px;
             border-radius: 5px;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-transform: uppercase;
             color: red;
             opacity: 0.5;

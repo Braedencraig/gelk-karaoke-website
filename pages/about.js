@@ -44,7 +44,7 @@ export default class About extends React.Component {
                   p {
                     font-family: Oswald, cursive;
                     font-size: 24px;
-                    color: white;
+                    color: #f1f1f1;
                     width: 80%;
                     margin: 25px auto;
                   }
@@ -64,7 +64,7 @@ export default class About extends React.Component {
           <h2 className='clientTitle'>CLIENTS</h2>
           <ClientImages />
           <style jsx>{`
-            @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
             h1,
             h2 {
               white-space: nowrap;
@@ -72,7 +72,7 @@ export default class About extends React.Component {
               letter-spacing: 5px;
               line-height: 1;
               font-size: 7vw;
-              font-family: Quicksand;
+              font-family: 'Roboto', sans-serif;
               font-weight: 100;
               text-align: center;
               color: #fee;

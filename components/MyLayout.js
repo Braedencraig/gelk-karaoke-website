@@ -4,9 +4,9 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 
 const layoutStyle = {
-  margin: -9,
-  background: 'black',
-  backgroundColor: '#282a2b',
+  // margin: -9,
+  background: 'rgba(44,113,246,.98)!important',
+  backgroundColor: 'rgba(44,113,246,.98)!important',
   backgroundSize: 'cover',
   margin: 0,
 };
@@ -19,7 +19,8 @@ const Layout = props => (
     </Head>
     <style jsx global>{`
       body {
-        background: #000;
+        @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+        background: rgba(44, 113, 246, 0.98) !important;
         box-sizing: border-box;
         margin: 0;
         padding: 0;

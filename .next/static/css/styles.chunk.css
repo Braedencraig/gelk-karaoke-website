@@ -7,16 +7,17 @@
 }
 
 .slick-slide img {
-    margin: auto;
-    border: 5px solid rgba(54, 56, 57, 0.9);
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    margin: 0 auto;
+    border: 2px solid #f1f1f1;
+    border-radius: 5px;
     -webkit-border-radius: 25px;
     height: 500px;
     width: 750px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #f1f1f1;
 }
 /* Slider */
 .slick-slider

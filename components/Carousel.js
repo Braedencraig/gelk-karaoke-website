@@ -14,14 +14,9 @@ class Carousel extends React.Component {
   }
   componentDidMount() {
     const client = contentful.createClient({
-      // This is the space ID. A space is like a project folder in Contentful terms
       space: 'sqmp3jmwaedr',
-      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
       accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
     });
-    // content type relates to the content type name in contentful
-    // figured it outttt
-    // 'post' instead of songList, post is linked to author so when post response you get author object as well
     client.getEntries({ content_type: 'about' }).then(response => {
       this.setState({
         about: response.items,
@@ -73,8 +68,8 @@ class Carousel extends React.Component {
   render() {
     var settings = {
       dots: true,
-      autoplay: true,
-      autoplaySpeed: 3000,
+      autoplay: false,
+      autoplaySpeed: 5000,
     };
     return (
       <div className='container'>
@@ -82,7 +77,7 @@ class Carousel extends React.Component {
           <div>
             <img src={this.state.photoOne} />
           </div>
-          <div>
+          <div className='text'>
             <p>
               {this.state.testimonialOne
                 ? this.state.testimonialOne.paragraphOne
@@ -104,7 +99,7 @@ class Carousel extends React.Component {
           <div>
             <img src={this.state.photoTwo} />
           </div>
-          <div>
+          <div className='text'>
             <p>
               {this.state.testimonialTwo
                 ? this.state.testimonialTwo.paragraphOne
@@ -126,7 +121,7 @@ class Carousel extends React.Component {
           <div>
             <img src={this.state.photoFour} />
           </div>
-          <div>
+          <div className='text'>
             <p>
               {this.state.testimonialThree
                 ? this.state.testimonialThree.paragraphOne
@@ -148,7 +143,7 @@ class Carousel extends React.Component {
           <div>
             <img src={this.state.photoThree} />
           </div>
-          <div>
+          <div className='text'>
             <p>
               {this.state.testimonialFour
                 ? this.state.testimonialFour.paragraphOne
@@ -169,13 +164,20 @@ class Carousel extends React.Component {
           </div>
         </Slider>
         <style jsx>{`
+          @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+
           p {
-            font-family: Oswald, cursive;
+            font-family: 'Roboto', sans-serif;
             font-size: 30px;
-            color: white;
-            width: 75%;
+            color: #f1f1f1;
+            width: 80%;
             margin: 0 auto;
             margin-top: 50px;
+            text-align: center;
+          }
+
+          .text {
+            padding: 50px 0;
           }
         `}</style>
       </div>

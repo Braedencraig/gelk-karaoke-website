@@ -11,8 +11,8 @@ import {
 } from 'react-scroll';
 
 const footerStyle = {
-  color: 'white',
-  background: 'rgba(54,56,57,0.9)',
+  color: 'rgba(44,113,246,.98)!important',
+  background: 'none',
 };
 
 class Footer extends React.Component {
@@ -30,7 +30,7 @@ class Footer extends React.Component {
         <a onClick={this.scrollToTop}>
           <div className='flexContainer'>
             <div className='flexOne'>
-              <p>Copyright 2019 | All Rights Reserved</p>
+              <p>Copyright 2020 | All Rights Reserved</p>
             </div>
             <div className='flexTwo'>
               <a href='https://twitter.com/goodenoughkband'>
@@ -77,27 +77,29 @@ class Footer extends React.Component {
           </div>
         </a>
         <style jsx>{`
+          @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+
           p {
-            color: white;
+            color: #f1f1f1;
             margin: 0 auto;
-            font-family: Oswald, sans-serif;
+            font-family: Roboto, sans-serif;
           }
 
           svg {
-            fill: white;
+            fill: #f1f1f1;
             transition: 0.4s all;
           }
 
           svg:hover {
-            fill: black;
+            opacity: 0.6;
           }
 
           .flexContainer {
-            width: 80%;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
+            padding: 5px 2%;
           }
 
           .flexOne {

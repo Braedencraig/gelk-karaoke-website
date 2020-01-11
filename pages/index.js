@@ -7,6 +7,7 @@ import * as Scroll from 'react-scroll';
 import Carousel from '../components/Carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import img from '../assets/GelkLogo.png';
 
 import {
   Link,
@@ -19,13 +20,25 @@ import {
 
 const Index = props => (
   <Layout>
-    <NeonLogo />
+    <div className='gelkLogo'>
+      <img
+        className='gelkImageLogo'
+        src={img}
+        alt="Good Enough Live Karaoke's Logo"
+      />
+    </div>
     <div className='chevron'>
-      <Link className='test6' to='text' spy={true} smooth={true} duration={500}>
+      <Link
+        className='scrollChevron'
+        to='text'
+        spy={true}
+        smooth={true}
+        duration={500}
+      >
         <svg
           height='50px'
           width='50px'
-          fill='#FFFFFF'
+          fill='#F1F1F1'
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
           x='0px'
@@ -39,8 +52,20 @@ const Index = props => (
       </Link>
     </div>
     <style jsx>{`
+
+    .gelkImageLogo {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .gelkLogo {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 10%;
+    }
       svg:hover {
-        fill: grey;
+        fill: rgba(241,241,241, 0.6);
         cursor: pointer;
       }
 
@@ -49,7 +74,7 @@ const Index = props => (
       }
       h1,
       a {
-        font-family: 'Arial';
+        font-family: 'Roboto', sans-serif;
       }
 
       ul {
@@ -74,7 +99,6 @@ const Index = props => (
         display: flex;
         width: 100%;
         justify-content: center;
-        margin-top: 85vh;
       }
 
       .wrapper {
@@ -82,10 +106,19 @@ const Index = props => (
         max-width: 960px;
         padding: 0 2%;
       }
+
+      .scrollBox{
+        position: relative;
+        color: white;
+        width: 20px;
+        height: 20px;
+        bottom: 200px;
+      }
+      }
     `}</style>
     <>
-      <div id='text'></div>
-      <Carousel id='text' />
+      <div id='text' className='scrollBox'></div>
+      <Carousel />
 
       <div className='introText'>
         <h2>We play, YOU SING!&trade;</h2>
@@ -111,38 +144,34 @@ const Index = props => (
     </>
     <style jsx>{`
       .introText {
-        font-family: Oswald, cursive;
+        font-family: 'Roboto', sans-serif;
         font-size: 30px;
-        color: white;
+        color: #f1f1f1;
         width: 80%;
         margin: 0 auto;
       }
 
       a {
-        color: white;
-        font-family: Oswald, cursive;
+        color: #f1f1f1;
+        font-family: 'Roboto', sans-serif;
         text-decoration: underline;
         cursor: pointer;
+        transition: all 0.4s;
+      }
+
+      .introText p {
+        line-height: 50px;
+        margin-bottom: 50px;
+        text-align: center;
       }
 
       .introText h2 {
         text-align: center;
-        font-size: 40px;
+        font-size: 50px;
         margin-top: -100px;
       }
     `}</style>
   </Layout>
 );
-
-// Index.getInitialProps = async function() {
-//   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-//   const data = await res.json();
-
-//   console.log(`Show data fetched. Count: ${data.length}`);
-
-//   return {
-//     shows: data.map(entry => entry.show),
-//   };
-// };
 
 export default Index;

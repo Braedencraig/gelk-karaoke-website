@@ -61,7 +61,7 @@ export default class Shows extends React.Component {
             letter-spacing: 5px;
             line-height: 1;
             font-size: 7vw;
-            font-family: vibur;
+            font-family: 'Roboto', sans-serif;
             font-weight: 100;
             text-align: center;
             color: #fee;
@@ -73,16 +73,16 @@ export default class Shows extends React.Component {
           }
 
           .shows {
-            font-family: vibur;
+            font-family: 'Roboto', sans-serif;
             width: 600px;
             margin: 0 auto;
             text-align: center;
             font-size: 26px;
-            color: white;
+            color: #f1f1f1;
           }
 
           p {
-            color: white;
+            color: #f1f1f1;
             font-size: 20px;
             display: flex;
             justify-content: center;

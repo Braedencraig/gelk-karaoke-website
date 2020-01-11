@@ -25,7 +25,7 @@ const TestHeader = _ => {
   return (
     <>
       <nav className={classes}>
-        <nav className='wrapper'>
+        <nav className='wrapper stroke'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='60'
@@ -38,7 +38,7 @@ const TestHeader = _ => {
             // style='fill:#FFFFFF'
             >
               <svg
-                fill='#FFFFFF'
+                fill='#f1f1f1'
                 xmlns='http://www.w3.org/2000/svg'
                 version='1.1'
                 x='0px'
@@ -63,11 +63,6 @@ const TestHeader = _ => {
               </Link>
             </li>
             <li>
-              <Link href='/about'>
-                <a>Testimonials</a>
-              </Link>
-            </li>
-            <li>
               <Link href='/shows'>
                 <a>Shows</a>
               </Link>
@@ -78,12 +73,17 @@ const TestHeader = _ => {
               </Link>
             </li>
             <li>
-              <Link href='/media'>
+              <Link as='testimonials' href='/about'>
+                <a>Testimonials</a>
+              </Link>
+            </li>
+            <li>
+              <Link as='media' href='/media'>
                 <a>Media</a>
               </Link>
             </li>
             <li>
-              <Link href='/contact'>
+              <Link as='contact' href='/contact'>
                 <a>Contact</a>
               </Link>
             </li>
@@ -93,15 +93,55 @@ const TestHeader = _ => {
       <header className='wrapper'></header>
       <style jsx>{`
    
-    @import url(//fonts.googleapis.com/css?family=Vibur);
-    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+
+
+
+
+      nav ul li {
+        display: inline-block;
+      }
+      nav ul li a {
+        display: block;
+        padding-bottom: 4px;
+      }
+      nav ul li a,
+      nav ul li a:after,
+      nav ul li a:before {
+        transition: all .5s;
+      }
+      nav ul li a:hover {
+        color: #f1f1f1;
+        opacity: 0.65;
+      }
+
+          /* stroke */
+      nav.stroke ul li a {
+        position: relative;
+      }
+      nav.stroke ul li a:after,
+      nav.fill ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '';
+        color: transparent;
+        background: #f1f1f1;
+        height: 1px;
+      }
+      nav.stroke ul li a:hover:after {
+        width: 100%;
+      }
 
     .navBar {
           transition: background-color 0.2s;
+          background: none;
         }
         .navBar.scrolled {
-          background-color: rgba(54,56,57, 0.9);
+          background: #2c71f6;
         }
 
       .singMan {
@@ -117,12 +157,12 @@ const TestHeader = _ => {
         position: fixed;
         right: 0;
         left: 0;
-        padding: 20px 0;
+        padding: 5px 0;
         z-index: 3;
       }
 
       .logo {
-        background-color: white;
+        background-color: #f1f1f1;
         border-radius: 50px;
         display: inline-block;
         height: 45px;
@@ -130,15 +170,9 @@ const TestHeader = _ => {
         width: 45px;
       }
 
-      .logo:hover {
-        background-color: #fee;
-        box-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
-          0 0 0.1em #ff4444, 0 10px 3px #000;
-      }
-
       .wrapper {
         margin: 0 auto;
-        max-width: 960px;
+        max-width: 1200px;
         padding: 0 2%;
       }
 
@@ -150,16 +184,11 @@ const TestHeader = _ => {
       }
 
       nav ul a {
-        font-family: 'Oswald';
-        color: #dddddd;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: #f1f1f1;
         text-decoration: none;
         transition: all 0.5s ease;
-      }
-
-      nav ul a:hover {
-       color: #fee;
-        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
-          0 0 0.1em #ff4444, 0 10px 3px #000;
       }
           
       li {

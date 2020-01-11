@@ -82,8 +82,8 @@ export default class List extends React.Component {
                           margin-top: 200px;
                         }
                         p {
-                          color: white;
-                          font-family: Oswald;
+                          color: #f1f1f1;
+                          font-family: 'Roboto', sans-serif;
                         }
                       `}</style>
                     </div>
@@ -125,7 +125,7 @@ export default class List extends React.Component {
             letter-spacing: 5px;
             line-height: 1;
             font-size: 7vw;
-            font-family: vibur;
+            font-family: 'Roboto', sans-serif;
             font-weight: 100;
             text-align: center;
             color: #fee;
@@ -137,11 +137,11 @@ export default class List extends React.Component {
           }
 
           .letter {
-            color: white;
+            color: #f1f1f1;
           }
 
           .list {
-            font-family: vibur;
+            font-family: 'Roboto', sans-serif;
             width: 600px;
             margin: 0 auto;
             text-align: center;
@@ -155,7 +155,7 @@ export default class List extends React.Component {
             background: rgba(40, 42, 43, 0.9);
           }
           p {
-            color: white;
+            color: #f1f1f1;
             font-size: 20px;
             display: flex;
             justify-content: center;
