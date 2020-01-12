@@ -40,6 +40,7 @@ export default class About extends React.Component {
                   color: #f1f1f1;
                   width: 80%;
                   margin: 25px auto;
+                  max-width: 1400px;
                 }
               `}</style>
             </>

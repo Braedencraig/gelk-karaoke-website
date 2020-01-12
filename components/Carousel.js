@@ -68,8 +68,8 @@ class Carousel extends React.Component {
   render() {
     var settings = {
       dots: true,
-      autoplay: false,
-      autoplaySpeed: 5000,
+      autoplay: true,
+      autoplaySpeed: 10000,
     };
     return (
       <div className='container'>

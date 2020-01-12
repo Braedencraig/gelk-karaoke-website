@@ -63,6 +63,7 @@ const Index = props => (
       width: 80%;
       margin: 0 auto;
       margin-top: 10%;
+      max-width: 1400px;
     }
       svg:hover {
         fill: rgba(241,241,241, 0.6);
@@ -132,8 +133,8 @@ const Index = props => (
             href='mailto:sing@goodenoughlivekaraoke.com?Subject=Hello%20'
             target='_top'
           >
-            sing@goodenoughlivekaraoke.com{' '}
-          </a>
+            sing@goodenoughlivekaraoke.com
+          </a>{' '}
           to book your event. And follow us on Instagram to see weekly public
           shows across Ontario. Since 2013, the band has played thousands of
           hours on stage at private and public events with its unique,
@@ -144,6 +145,7 @@ const Index = props => (
     </>
     <style jsx>{`
       .introText {
+        max-width: 1400px;
         font-family: 'Roboto', sans-serif;
         font-size: 30px;
         color: #f1f1f1;

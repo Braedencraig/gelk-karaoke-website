@@ -68,10 +68,12 @@ export default class About extends React.Component {
           .flex {
             display: flex;
             width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
           }
 
           p {
-            color: f1f1f1;
+            color: #f1f1f1;
             font-family: 'Roboto', sans-serif;
             font-size: 26px;
             line-height: 50px;
@@ -83,7 +85,7 @@ export default class About extends React.Component {
           }
 
           a:hover {
-            color: black;
+            opacity: 0.65;
           }
 
           .contactNeon {

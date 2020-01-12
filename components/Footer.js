@@ -95,7 +95,7 @@ class Footer extends React.Component {
           }
 
           .flexContainer {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;

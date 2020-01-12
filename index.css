@@ -4,6 +4,7 @@
     margin: 0 auto;
     margin-bottom: 100px;
     margin-top: -150px;
+    max-width: 1400px;
 }
 
 .slick-slide img {
