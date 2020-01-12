@@ -4,7 +4,6 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 
 const layoutStyle = {
-  // margin: -9,
   background: 'rgba(44,113,246,.98)!important',
   backgroundColor: 'rgba(44,113,246,.98)!important',
   backgroundSize: 'cover',

@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
+import Home from '../assets/home.png';
+import Shows from '../assets/shows.png';
+import Testimonials from '../assets/testimonials.png';
+import Media from '../assets/media.png';
+import Contact from '../assets/contact.png';
 
 const TestHeader = _ => {
   const [scrolled, setScrolled] = useState();
@@ -58,12 +63,18 @@ const TestHeader = _ => {
           <ul>
             <li>
               <Link href='/'>
-                <a>Home</a>
+                <a>
+                  {/* <img src={Home} alt='Home navigation button' /> */}
+                  Home
+                </a>
               </Link>
             </li>
             <li>
               <Link href='/shows'>
-                <a>Shows</a>
+                <a>
+                  {/* <img src={Shows} alt='Shows navigation button' /> */}
+                  Shows
+                </a>
               </Link>
             </li>
             <li>
@@ -73,17 +84,29 @@ const TestHeader = _ => {
             </li>
             <li>
               <Link href='/testimonials'>
-                <a>Testimonials</a>
+                <a>
+                  {/* <img
+                    src={Testimonials}
+                    alt='Testimonials navigation button'
+                  /> */}
+                  Testimonials
+                </a>
               </Link>
             </li>
             <li>
               <Link href='/media'>
-                <a>Media</a>
+                <a>
+                  {/* <img src={Media} alt='Media navigation button' /> */}
+                  Media
+                </a>
               </Link>
             </li>
             <li>
               <Link href='/contact'>
-                <a>Contact</a>
+                <a>
+                  {/* <img src={Contact} alt='Contact navigation button' /> */}
+                  Contact
+                </a>
               </Link>
             </li>
           </ul>
