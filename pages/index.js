@@ -162,7 +162,7 @@ const Index = props => (
       .introText p {
         line-height: 50px;
         margin-bottom: 50px;
-        text-align: center;
+        text-align: left;
       }
 
       .introText h2 {

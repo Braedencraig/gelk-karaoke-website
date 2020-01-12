@@ -13,15 +13,10 @@ export default class About extends React.Component {
 
   componentDidMount() {
     const client = contentful.createClient({
-      // This is the space ID. A space is like a project folder in Contentful terms
       space: 'sqmp3jmwaedr',
-      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
       accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
     });
-    // content type relates to the content type name in contentful
-    // figured it outttt
-    // 'post' instead of songList, post is linked to author so when post response you get author object as well
-    client.getEntries({ content_type: 'about' }).then(response => {
+    client.getEntries({ content_type: 'testimonials' }).then(response => {
       this.setState({
         testimonials: response.items,
       });
@@ -30,39 +25,36 @@ export default class About extends React.Component {
 
   render() {
     const testimonials = this.state.testimonials.map((testimonials, i) => {
-      if (this.state.testimonials[0]) {
-        return testimonials.fields.largeTestimonials.content[0].content.map(
-          (testimonials, i) => {
-            // console.log(testimonials.content[0].content);
-            return (
-              <>
-                <div>
-                  <p>{testimonials.content[0].content[0].value}</p>
-                  <p>{testimonials.content[0].content[1].value}</p>
-                </div>
-                <style jsx>{`
-                  p {
-                    font-family: Oswald, cursive;
-                    font-size: 24px;
-                    color: #f1f1f1;
-                    width: 80%;
-                    margin: 25px auto;
-                  }
-                `}</style>
-              </>
-            );
-          },
-        );
+      if (this.state.testimonials[0].fields) {
+        const testimonial = Object.values(testimonials.fields);
+        return testimonial.map((testimonials, i) => {
+          return (
+            <>
+              <div>
+                <p>{testimonials}</p>
+              </div>
+              <style jsx>{`
+                p {
+                  font-family: 'Roboto', sans-serif;
+                  font-size: 24px;
+                  color: #f1f1f1;
+                  width: 80%;
+                  margin: 25px auto;
+                }
+              `}</style>
+            </>
+          );
+        });
       }
     });
 
     return (
       <Layout>
         <div className='wrapper'>
-          <h1 className='contactNeon'>TESTIMONIALS</h1>
-          {testimonials}
           <h2 className='clientTitle'>CLIENTS</h2>
           <ClientImages />
+          <h2 className='clientTitleTest'>TESTIMONIALS</h2>
+          {testimonials}
           <style jsx>{`
             @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
             h1,
@@ -90,6 +82,10 @@ export default class About extends React.Component {
 
             .clientTitle {
               margin-bottom: 50px;
+            }
+            .clientTitleTest {
+              margin-top: 150px;
+              margin-bottom: 80px;
             }
           `}</style>
         </div>

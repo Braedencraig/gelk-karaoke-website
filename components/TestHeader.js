@@ -73,17 +73,17 @@ const TestHeader = _ => {
               </Link>
             </li>
             <li>
-              <Link as='testimonials' href='/about'>
+              <Link href='/about'>
                 <a>Testimonials</a>
               </Link>
             </li>
             <li>
-              <Link as='media' href='/media'>
+              <Link href='/media'>
                 <a>Media</a>
               </Link>
             </li>
             <li>
-              <Link as='contact' href='/contact'>
+              <Link href='/contact'>
                 <a>Contact</a>
               </Link>
             </li>

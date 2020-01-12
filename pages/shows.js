@@ -8,44 +8,33 @@ export default class Shows extends React.Component {
     super(props);
     this.state = {
       shows: [],
-      links: [],
     };
   }
 
   componentDidMount() {
     const client = contentful.createClient({
-      // This is the space ID. A space is like a project folder in Contentful terms
       space: 'sqmp3jmwaedr',
-      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
       accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
     });
-    // content type relates to the content type name in contentful
-    // figured it outttt
-    // 'post' instead of songList, post is linked to author so when post response you get author object as well
-    client.getEntries({ content_type: 'shows' }).then(response => {
+    client.getEntries({ content_type: 'upcomingShows' }).then(response => {
       this.setState({
         shows: response.items,
-        links: response.items,
       });
     });
   }
   render() {
-    const shows = this.state.links.map((links, i) => {
-      return links.fields.link.content.map((links, i) => {
-        return links.content.map((links, i) => {
-          return this.state.shows.map((shows, i) => {
-            return shows.fields.shows.content.map((shows, i) => {
-              return (
-                <>
-                  <Link href={{ pathname: `${links.value}` }}>
-                    <a>{shows.content[0].value}</a>
-                  </Link>
-                </>
-              );
-            });
-          });
+    const shows = this.state.shows.map((shows, i) => {
+      if (shows.fields.showOne) {
+        const actualShows = Object.values(shows.fields);
+        return actualShows.map((show, i) => {
+          const link = show.content[0].content[1].data.uri;
+          return (
+            <h3>
+              <a href={link}>{show.content[1].content[0].value}</a>
+            </h3>
+          );
         });
-      });
+      }
     });
 
     return (

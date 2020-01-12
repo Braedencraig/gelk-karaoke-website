@@ -49,14 +49,9 @@ export default class List extends React.Component {
 
   componentDidMount() {
     const client = contentful.createClient({
-      // This is the space ID. A space is like a project folder in Contentful terms
       space: 'sqmp3jmwaedr',
-      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
       accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
     });
-    // content type relates to the content type name in contentful
-    // figured it outttt
-    // 'post' instead of songList, post is linked to author so when post response you get author object as well
     client.getEntries({ content_type: 'songList' }).then(response => {
       this.setState({
         songs: response.items,
@@ -109,6 +104,7 @@ export default class List extends React.Component {
                     spy={true}
                     smooth={true}
                     duration={500}
+                    offset={-150}
                   >
                     <a href={`#${letter}`}>{letter}</a>
                   </Link>
@@ -151,8 +147,8 @@ export default class List extends React.Component {
           .alphabet {
             margin: 50px 0;
             position: sticky;
-            top: 100px;
-            background: rgba(40, 42, 43, 0.9);
+            top: 60px;
+            background: rgba(44, 113, 246, 0.98);
           }
           p {
             color: #f1f1f1;
@@ -165,9 +161,8 @@ export default class List extends React.Component {
             text-decoration: none;
             text-transform: uppercase;
             margin: 10px;
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em limegreen,
-              0 0 0.5em limegreen, 0 0 0.1em limegreen, 0 10px 3px #000;
+            font-family: 'Roboto', sans-serif;
+            color: #f1f1f1;
           }
 
           a:hover {

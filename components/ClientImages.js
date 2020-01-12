@@ -40,7 +40,7 @@ class ClientImages extends React.Component {
 
         <style jsx>{`
           .clientImages img {
-            width: 100px;
+            width: 150px;
             height: 70px;
             border: none;
             border-radius: 5px;
@@ -52,12 +52,16 @@ class ClientImages extends React.Component {
           }
 
           .flexContainer {
+            border: 5px solid #f1f1f1;
+            border-radius: 25px;
             display: flex;
             width: 100%;
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: -100px;
             margin-top: 100px;
+            background: white;
+            padding: 50px 0;
           }
         `}</style>
       </div>
