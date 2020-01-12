@@ -22,12 +22,6 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/about": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
-    ],
     "/contact": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -44,10 +38,22 @@
     ],
     "/media": [
       "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/shows": [
       "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/testimonials": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
       "static/runtime/main.js"
     ]
   }

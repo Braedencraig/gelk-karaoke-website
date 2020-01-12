@@ -99,7 +99,7 @@ class Footer extends React.Component {
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            padding: 5px 2%;
+            padding: 5px 5%;
           }
 
           .flexOne {

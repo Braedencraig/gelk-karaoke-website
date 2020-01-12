@@ -116,9 +116,7 @@ export default class About extends React.Component {
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
             text-align: center;
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #f00, 0 0 0.5em #f00,
-              0 0 0.1em #f00, 0 10px 3px #000;
+            color: #f1f1f1;
           }
           /* section styling */
 
@@ -160,34 +158,34 @@ export default class About extends React.Component {
             height: 100%;
             width: 100%;
             border: none;
-            font: 400 1em/1.2 'Raleway', sans-serif;
-            color: rgb(89, 95, 110);
+            font: 400 1em/1.2 'Roboto', sans-serif;
+            color: #f1f1f1;
             background: none;
           }
           /* textarea styling */
           textarea {
             outline: none;
-            padding: 20px 5px 10px 5px;
-            height: 100%;
+            margin: 20px 5px 10px 5px;
+            height: 76%;
             width: 100%;
             border: none;
             resize: none;
-            font: 400 1em/1.2 'Raleway', sans-serif;
-            color: rgb(89, 95, 110);
+            font: 400 1em/1.2 'Roboto', sans-serif;
+            color: #f1f1f1;
             background: none;
           }
           /* label styling */
           label {
             position: absolute;
             font-family: 'Roboto', sans-serif;
-            color: #fee;
+            color: #f1f1f1;
             height: 100%;
             width: 100%;
             bottom: 0;
             left: 0;
             pointer-events: none;
             font-size: 16px;
-            border-bottom: 1px solid #fee;
+            border-bottom: 1px solid #f1f1f1;
           }
           label::after {
             position: absolute;
@@ -197,7 +195,7 @@ export default class About extends React.Component {
             bottom: 0;
             left: 0;
             transform: translateX(-100%);
-            border-bottom: 3px solid #fee;
+            border-bottom: 3px solid #f1f1f1;
             transition: transform 0.3s ease;
           }
           label > span {
@@ -215,30 +213,23 @@ export default class About extends React.Component {
             transform: translateY(-200%);
             font-size: 0.8em;
             font-weight: 700;
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-              0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+            color: #f1f1f1;
           }
           input:focus + label::after {
             transform: translateX(0%);
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-              0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+            color: #f1f1f1;
           }
           textarea:focus + label {
             border: none;
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-              0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+            color: #f1f1f1;
           }
           textarea:focus + label span,
           textarea:valid + label span {
             transform: translateY(-520%);
             font-size: 0.8em;
             font-weight: 700;
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-              0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+            color: #f1f1f1;
+            margin-bottom: 20px;
           }
           textarea:focus + label::after {
             transform: translateX(0%);
@@ -249,15 +240,15 @@ export default class About extends React.Component {
             transition: 0.5s;
           }
           button {
-            margin-top: 50px;
+            margin-top: 25px;
             padding: 20px;
             letter-spacing: 2px;
             border-radius: 5px;
             font-family: 'Roboto', sans-serif;
             text-transform: uppercase;
-            color: red;
+            color: rgba(44, 113, 246, 0.98);
             opacity: 0.5;
-            background: #fee;
+            background: #f1f1f1;
           }
           button:hover {
             opacity: 1;

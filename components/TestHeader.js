@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import NeonLogo from '../components/NeonLogo';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 
@@ -73,7 +72,7 @@ const TestHeader = _ => {
               </Link>
             </li>
             <li>
-              <Link href='/about'>
+              <Link href='/testimonials'>
                 <a>Testimonials</a>
               </Link>
             </li>
@@ -94,9 +93,6 @@ const TestHeader = _ => {
       <style jsx>{`
    
     @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
-
-
-
 
       nav ul li {
         display: inline-block;
@@ -173,7 +169,7 @@ const TestHeader = _ => {
       .wrapper {
         margin: 0 auto;
         max-width: 1400px;
-        padding: 0 2%;
+        padding: 0 5%;
       }
 
       nav ul {

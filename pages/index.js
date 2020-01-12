@@ -147,7 +147,7 @@ const Index = props => (
       .introText {
         max-width: 1400px;
         font-family: 'Roboto', sans-serif;
-        font-size: 30px;
+        font-size: 24px;
         color: #f1f1f1;
         width: 80%;
         margin: 0 auto;
@@ -161,15 +161,19 @@ const Index = props => (
         transition: all 0.4s;
       }
 
+      a:hover {
+        opacity: 0.65;
+      }
+
       .introText p {
-        line-height: 50px;
+        line-height: 38px;
         margin-bottom: 50px;
         text-align: left;
       }
 
       .introText h2 {
         text-align: center;
-        font-size: 50px;
+        font-size: 70px;
         margin-top: -100px;
       }
     `}</style>

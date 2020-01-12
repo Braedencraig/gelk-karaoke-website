@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 const contentful = require('contentful');
-
 import Slider from 'react-slick';
 import '../index.css';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
+const ColorCircularProgress = withStyles({
+  root: {
+    color: '#f1f1f1',
+  },
+})(CircularProgress);
 
 class ClientImages extends React.Component {
   constructor(props) {
@@ -28,14 +35,24 @@ class ClientImages extends React.Component {
   render() {
     return (
       <div className='container'>
-        <div className='flexContainer'>
-          {this.state.clients[0]
-            ? this.state.clients[0].fields.clientImages.map((images, i) => (
-                <div className='clientImages' key={i}>
-                  <img src={images.fields.file.url} />
-                </div>
-              ))
-            : ''}
+        <div
+          className={
+            this.state.clients.length === 0
+              ? 'flexContainerLoading'
+              : 'flexContainer'
+          }
+        >
+          {this.state.clients.length === 0 ? (
+            <ColorCircularProgress size={100} thickness={5} />
+          ) : this.state.clients[0] ? (
+            this.state.clients[0].fields.clientImages.map((images, i) => (
+              <div className='clientImages' key={i}>
+                <img src={images.fields.file.url} />
+              </div>
+            ))
+          ) : (
+            ''
+          )}
         </div>
 
         <style jsx>{`
@@ -62,6 +79,19 @@ class ClientImages extends React.Component {
             margin-top: 100px;
             background: white;
             padding: 50px 0;
+            min-height: 55vh;
+          }
+
+          .flexContainerLoading {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: -100px;
+            margin-top: 100px;
+            background: none;
+            padding: 50px 0;
+            min-height: 55vh;
           }
         `}</style>
       </div>

@@ -1,46 +1,96 @@
 import Layout from '../components/MyLayout';
 const contentful = require('contentful');
+import ClientImages from '../components/ClientImages';
 import TestHeader from '../components/TestHeader';
 
-export default class Media extends React.Component {
+export default class About extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: [],
+      media: [],
     };
   }
 
   componentDidMount() {
     const client = contentful.createClient({
-      // This is the space ID. A space is like a project folder in Contentful terms
       space: 'sqmp3jmwaedr',
-      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
       accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
     });
-    // content type relates to the content type name in contentful
-    // figured it outttt
-    // 'post' instead of songList, post is linked to author so when post response you get author object as well
-    client.getEntries({ content_type: 'post' }).then(response => {
-      console.log(response);
+    client.getEntries({ content_type: 'media' }).then(response => {
       this.setState({
-        articles: response.items,
+        media: response.items,
       });
     });
   }
+
   render() {
-    const ass = this.state.articles.map((article, i) => {
-      console.log(article);
-      return (
-        <div key={i}>
-          <img src={article.fields.featuredImage.fields.file.url} alt='' />
-          {article.fields.title}
-        </div>
-      );
-    });
+    // const testimonials = this.state.testimonials.map((testimonials, i) => {
+    //   if (this.state.testimonials[0].fields) {
+    //     const testimonial = Object.values(testimonials.fields);
+    //     return testimonial.map((testimonials, i) => {
+    //       return (
+    //         <>
+    //           <div>
+    //             <p>{testimonials}</p>
+    //           </div>
+    //           <style jsx>{`
+    //             p {
+    //               font-family: 'Roboto', sans-serif;
+    //               font-size: 24px;
+    //               color: #f1f1f1;
+    //               width: 80%;
+    //               margin: 25px auto;
+    //               max-width: 1400px;
+    //               line-height: 36px;
+    //             }
+    //           `}</style>
+    //         </>
+    //       );
+    //     });
+    //   }
+    // });
+
     return (
       <Layout>
-        {ass}
-        <p>This is the about page</p>
+        <div className='wrapper'>
+          <h2 className='clientTitle'>PICTURES</h2>
+          <ClientImages />
+          <h2 className='clientTitleTest'>VIDEOS</h2>
+          {/* {testimonials} */}
+          <style jsx>{`
+            @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+            h1,
+            h2 {
+              white-space: nowrap;
+              margin: 0 -5px 0 0;
+              letter-spacing: 5px;
+              line-height: 1;
+              font-size: 7vw;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 100;
+              text-align: center;
+              color: #fee;
+              text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em blue, 0 0 0.5em blue,
+                0 0 0.1em blue, 0 10px 3px #000;
+            }
+
+            h1 {
+              margin-bottom: 50px;
+            }
+
+            .wrapper {
+              margin-top: 20vh;
+            }
+
+            .clientTitle {
+              margin-bottom: 50px;
+            }
+            .clientTitleTest {
+              margin-top: 150px;
+              margin-bottom: 80px;
+            }
+          `}</style>
+        </div>
       </Layout>
     );
   }

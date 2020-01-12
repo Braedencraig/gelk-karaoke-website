@@ -10,6 +10,14 @@ import {
   scrollSpy,
   scroller,
 } from 'react-scroll';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
+const ColorCircularProgress = withStyles({
+  root: {
+    color: '#f1f1f1',
+  },
+})(CircularProgress);
 
 export default class List extends React.Component {
   constructor(props) {
@@ -112,7 +120,13 @@ export default class List extends React.Component {
               );
             })}
           </p>
-          <div className='list'>{list}</div>
+          <div className='list'>
+            {this.state.songs.length === 0 ? (
+              <ColorCircularProgress size={100} thickness={5} />
+            ) : (
+              list
+            )}
+          </div>
         </div>
         <style jsx>{`
           h1 {
@@ -124,9 +138,7 @@ export default class List extends React.Component {
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
             text-align: center;
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em limegreen,
-              0 0 0.5em limegreen, 0 0 0.1em limegreen, 0 10px 3px #000;
+            color: #f1f1f1;
           }
           .listWrapper {
             margin-top: 25vh;
@@ -142,6 +154,7 @@ export default class List extends React.Component {
             margin: 0 auto;
             text-align: center;
             font-size: 26px;
+            min-height: 55vh;
           }
 
           .alphabet {
