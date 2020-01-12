@@ -161,7 +161,7 @@ export default class List extends React.Component {
             margin: 50px 0;
             position: sticky;
             top: 60px;
-            background: rgba(44, 113, 246, 0.98);
+            background: rgb(44, 113, 246);
           }
           p {
             color: #f1f1f1;

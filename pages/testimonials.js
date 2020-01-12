@@ -2,6 +2,14 @@ import Layout from '../components/MyLayout';
 const contentful = require('contentful');
 import ClientImages from '../components/ClientImages';
 import TestHeader from '../components/TestHeader';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
+const ColorCircularProgress = withStyles({
+  root: {
+    color: '#f1f1f1',
+  },
+})(CircularProgress);
 
 export default class About extends React.Component {
   constructor(props) {
@@ -54,7 +62,11 @@ export default class About extends React.Component {
       <Layout>
         <div className='wrapper'>
           <h2 className='clientTitle'>CLIENTS</h2>
-          <ClientImages />
+          {this.state.testimonials.length === 0 ? (
+            <ColorCircularProgress size={100} thickness={5} />
+          ) : (
+            <ClientImages />
+          )}
           <h2 className='clientTitleTest'>TESTIMONIALS</h2>
           {testimonials}
           <style jsx>{`
@@ -80,6 +92,7 @@ export default class About extends React.Component {
 
             .wrapper {
               margin-top: 20vh;
+              min-height: 55vh;
             }
 
             .clientTitle {
