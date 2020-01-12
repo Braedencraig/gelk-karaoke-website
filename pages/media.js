@@ -2,6 +2,14 @@ import Layout from '../components/MyLayout';
 const contentful = require('contentful');
 import ClientImages from '../components/ClientImages';
 import TestHeader from '../components/TestHeader';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
+const ColorCircularProgress = withStyles({
+  root: {
+    color: '#f1f1f1',
+  },
+})(CircularProgress);
 
 export default class About extends React.Component {
   constructor(props) {
@@ -25,6 +33,53 @@ export default class About extends React.Component {
   }
 
   render() {
+    const videos = this.state.media.map((videos, i) => {
+      if (videos.fields.videos) {
+        return videos.fields.videos.map((videos, i) => {
+          return (
+            <>
+              <div className='pictures'>
+                <div className='top'>
+                  <video width='400' height='320' controls>
+                    <source src={videos.fields.file.url} type='video/mp4' />
+                    ]Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className='bottom'>
+                  <p>{videos.fields.title}</p>
+                </div>
+              </div>
+
+              <style jsx>{`
+                p {
+                  font-family: 'Roboto', sans-serif;
+                  font-size: 24px;
+                  font-weight: 700;
+                  color: #f1f1f1;
+                  text-align: center;
+                }
+
+                .pictures {
+                  width: 40%;
+                  margin: 25px auto;
+                  position: relative;
+                }
+
+                video {
+                  width: 100%;
+                  height: auto;
+                }
+
+                .bottom {
+                  margin-top: -15px;
+                }
+              `}</style>
+            </>
+          );
+        });
+      }
+    });
+
     const pictures = this.state.media.map((pictures, i) => {
       if (pictures.fields.pictures) {
         return pictures.fields.pictures.map((pictures, i) => {
@@ -45,7 +100,8 @@ export default class About extends React.Component {
               <style jsx>{`
                 p {
                   font-family: 'Roboto', sans-serif;
-                  font-size: 20px;
+                  font-size: 24px;
+                  font-weight: 700;
                   color: #f1f1f1;
                   text-align: center;
                 }
@@ -59,27 +115,15 @@ export default class About extends React.Component {
                 .pictures .top {
                   max-width: 300px;
                   max-height: 400px;
-                  position: relative;
-                  z-index: 10;
-                  transition: all 0.4s;
-                }
-
-                .pictures .top:hover {
-                  opacity: 0.65;
-                  z-index: 3;
-                }
-
-                .pictures .bottom {
-                  position: absolute;
-                  z-index: 5;
-                  top: 50%;
-                  right: 50%;
-                  transform: translate(50%, -50%);
                 }
 
                 img {
                   width: 100%;
                   height: auto;
+                }
+
+                .bottom {
+                  margin-top: -15px;
                 }
               `}</style>
             </>
@@ -92,9 +136,22 @@ export default class About extends React.Component {
       <Layout>
         <div className='wrapper'>
           <h2 className='clientTitle'>PICTURES</h2>
-          <div className='flexIt'>{pictures}</div>
+          <div className='flexIt'>
+            {this.state.media.length === 0 ? (
+              <ColorCircularProgress size={100} thickness={5} />
+            ) : (
+              pictures
+            )}
+          </div>
           <h2 className='clientTitleTest'>VIDEOS</h2>
-          {/* {testimonials} */}
+          <div className='flexIt'>
+            {' '}
+            {this.state.media.length === 0 ? (
+              <ColorCircularProgress size={100} thickness={5} />
+            ) : (
+              videos
+            )}
+          </div>
           <style jsx>{`
             @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
             .flexIt {
