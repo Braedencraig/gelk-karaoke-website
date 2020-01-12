@@ -29,9 +29,27 @@ export default class Shows extends React.Component {
         return actualShows.map((show, i) => {
           const link = show.content[0].content[1].data.uri;
           return (
-            <h3>
-              <a href={link}>{show.content[1].content[0].value}</a>
-            </h3>
+            <>
+              <p>
+                <a target='_blank' href={link}>
+                  {show.content[1].content[0].value}
+                </a>
+              </p>
+              <style jsx>{`
+                a {
+                  text-decoration: none;
+                  color: #f1f1f1;
+                  transition: all 0.4s;
+                }
+                p {
+                  text-align: left;
+                }
+
+                a:hover {
+                  opacity: 0.65;
+                }
+              `}</style>
+            </>
           );
         });
       }
@@ -57,6 +75,11 @@ export default class Shows extends React.Component {
             text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
               0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
           }
+
+          .contactNeon {
+            margin-bottom: 70px;
+          }
+
           .listWrapper {
             margin-top: 25vh;
           }
@@ -68,6 +91,7 @@ export default class Shows extends React.Component {
             text-align: center;
             font-size: 26px;
             color: #f1f1f1;
+            min-height: 55vh;
           }
 
           p {
@@ -75,15 +99,6 @@ export default class Shows extends React.Component {
             font-size: 20px;
             display: flex;
             justify-content: center;
-          }
-
-          a {
-            text-decoration: none;
-            text-transform: uppercase;
-            margin: 10px;
-            color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444,
-              0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
           }
 
           a:hover {
