@@ -29,9 +29,12 @@ export default class About extends React.Component {
           </div>
           <div className='flexTwo'>
             <section id='contact'>
-              <form action=''>
+              <form
+                action='http://www.focuspocus.io/magic/jenn.cowan@gmail.com'
+                method='post'
+              >
                 <fieldset>
-                  <input type='text' name='' autocomplete='off' required />
+                  <input type='text' name='name' autocomplete='off' required />
                   <label for='name'>
                     <span>Name</span>
                   </label>
@@ -247,11 +250,11 @@ export default class About extends React.Component {
             font-family: 'Roboto', sans-serif;
             text-transform: uppercase;
             color: rgba(44, 113, 246, 0.98);
-            opacity: 0.5;
+            opacity: 1;
             background: #f1f1f1;
           }
           button:hover {
-            opacity: 1;
+            opacity: 0.65;
           }
           button span:nth-child(2) {
             display: none;

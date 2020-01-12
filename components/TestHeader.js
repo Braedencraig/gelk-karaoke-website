@@ -137,7 +137,7 @@ const TestHeader = _ => {
           background: none;
         }
         .navBar.scrolled {
-          background: #2c71f6;
+          background: rgba(44,113,246,0.98);
         }
 
       .singMan {

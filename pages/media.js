@@ -16,7 +16,8 @@ export default class About extends React.Component {
       space: 'sqmp3jmwaedr',
       accessToken: '01TsFxZR2mrw_VWsuCtzZCBCzKsrvCTDX9is-6UPzqU',
     });
-    client.getEntries({ content_type: 'media' }).then(response => {
+
+    client.getEntries({ content_type: 'picsAndVideos' }).then(response => {
       this.setState({
         media: response.items,
       });
@@ -24,41 +25,90 @@ export default class About extends React.Component {
   }
 
   render() {
-    // const testimonials = this.state.testimonials.map((testimonials, i) => {
-    //   if (this.state.testimonials[0].fields) {
-    //     const testimonial = Object.values(testimonials.fields);
-    //     return testimonial.map((testimonials, i) => {
-    //       return (
-    //         <>
-    //           <div>
-    //             <p>{testimonials}</p>
-    //           </div>
-    //           <style jsx>{`
-    //             p {
-    //               font-family: 'Roboto', sans-serif;
-    //               font-size: 24px;
-    //               color: #f1f1f1;
-    //               width: 80%;
-    //               margin: 25px auto;
-    //               max-width: 1400px;
-    //               line-height: 36px;
-    //             }
-    //           `}</style>
-    //         </>
-    //       );
-    //     });
-    //   }
-    // });
+    const pictures = this.state.media.map((pictures, i) => {
+      if (pictures.fields.pictures) {
+        return pictures.fields.pictures.map((pictures, i) => {
+          return (
+            <>
+              <div className='pictures'>
+                <div className='top'>
+                  <img
+                    src={pictures.fields.file.url}
+                    alt={pictures.fields.title}
+                  />
+                </div>
+                <div className='bottom'>
+                  <p>{pictures.fields.title}</p>
+                </div>
+              </div>
+
+              <style jsx>{`
+                p {
+                  font-family: 'Roboto', sans-serif;
+                  font-size: 20px;
+                  color: #f1f1f1;
+                  text-align: center;
+                }
+
+                .pictures {
+                  width: 30%;
+                  margin: 25px auto;
+                  position: relative;
+                }
+
+                .pictures .top {
+                  max-width: 300px;
+                  max-height: 400px;
+                  position: relative;
+                  z-index: 10;
+                  transition: all 0.4s;
+                }
+
+                .pictures .top:hover {
+                  opacity: 0.65;
+                  z-index: 3;
+                }
+
+                .pictures .bottom {
+                  position: absolute;
+                  z-index: 5;
+                  top: 50%;
+                  right: 50%;
+                  transform: translate(50%, -50%);
+                }
+
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+              `}</style>
+            </>
+          );
+        });
+      }
+    });
 
     return (
       <Layout>
         <div className='wrapper'>
           <h2 className='clientTitle'>PICTURES</h2>
-          <ClientImages />
+          <div className='flexIt'>{pictures}</div>
           <h2 className='clientTitleTest'>VIDEOS</h2>
           {/* {testimonials} */}
           <style jsx>{`
             @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+            .flexIt {
+              border: 5px solid #f1f1f1;
+              border-radius: 25px;
+              display: flex;
+              width: 80%;
+              flex-wrap: wrap;
+              justify-content: center;
+              margin: 0 auto;
+              padding: 50px;
+              min-height: 55vh;
+              max-width: 1400px;
+            }
             h1,
             h2 {
               white-space: nowrap;
