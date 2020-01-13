@@ -188,6 +188,12 @@ export default class List extends React.Component {
           a:hover {
             text-decoration: underline;
           }
+
+          @media screen and (max-width: 1015px) {
+            .alphabet {
+              top: 80px;
+            }
+          }
         `}</style>
       </Layout>
     );

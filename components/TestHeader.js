@@ -244,7 +244,7 @@ const TestHeader = _ => {
         justify-content: space-between;
       }
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1015px) {
 
           nav .wrapper {
             background: rgba(44,113,246,0.98);

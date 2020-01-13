@@ -176,6 +176,12 @@ const Index = props => (
         font-size: 70px;
         margin-top: -100px;
       }
+
+      @media screen and (max-width: 1015px) {
+        .introText h2 {
+          font-size: 45px;
+        }
+      }
     `}</style>
   </Layout>
 );

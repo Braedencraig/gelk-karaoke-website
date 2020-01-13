@@ -31,6 +31,26 @@
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
       "static/runtime/main.js"
+    ],
+    "/list": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/media": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/shows": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/testimonials": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ]
   }
 }

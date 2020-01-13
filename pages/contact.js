@@ -270,6 +270,27 @@ export default class About extends React.Component {
           button:focus:nth-child(1) {
             display: none;
           }
+
+          @media screen and (max-width: 1015px) {
+            .flex {
+              flex-direction: column;
+            }
+
+            p {
+              text-align: center;
+              margin-top: 50px;
+            }
+
+            .flexOne {
+              width: 75%;
+              margin: 0 auto;
+            }
+
+            .flexTwo {
+              margin: 0 8%;
+              width: 75%;
+            }
+          }
         `}</style>
       </Layout>
     );

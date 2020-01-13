@@ -20,6 +20,21 @@
 .slick-next:before {
     color: #f1f1f1;
 }
+
+@media screen and (max-width: 1015px) {
+    .slick-slide img {
+        margin: 0 auto;
+        border: 2px solid #f1f1f1;
+        border-radius: 5px;
+        -webkit-border-radius: 25px;
+        height: 350px;
+        width: 500px;
+    }
+
+    .slick-track {
+        height: 50vh;
+    }
+}
 /* Slider */
 .slick-slider
 {

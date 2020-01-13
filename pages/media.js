@@ -127,6 +127,12 @@ export default class About extends React.Component {
                   max-width: 300px;
                   text-align: center;
                 }
+                @media screen and (max-width: 1015px) {
+                  .pictures {
+                    width: 40%;
+                    margin: 0 auto;
+                  }
+                }
               `}</style>
             </>
           );
