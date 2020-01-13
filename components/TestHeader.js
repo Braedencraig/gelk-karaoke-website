@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
-import Home from '../assets/home.png';
-import Shows from '../assets/shows.png';
-import Testimonials from '../assets/testimonials.png';
-import Media from '../assets/media.png';
-import Contact from '../assets/contact.png';
+import Home from '../assets/home.svg';
+import Shows from '../assets/shows.svg';
+import Testimonials from '../assets/testimonials.svg';
+import Media from '../assets/media.svg';
+import Contact from '../assets/contact.svg';
+import SongList from '../assets/songlist.svg';
 
 const TestHeader = _ => {
   const [scrolled, setScrolled] = useState();
@@ -64,48 +65,45 @@ const TestHeader = _ => {
             <li>
               <Link href='/'>
                 <a>
-                  {/* <img src={Home} alt='Home navigation button' /> */}
-                  Home
+                  <img src={Home} alt='Home navigation button' />
                 </a>
               </Link>
             </li>
             <li>
               <Link href='/shows'>
                 <a>
-                  {/* <img src={Shows} alt='Shows navigation button' /> */}
-                  Shows
+                  <img src={Shows} alt='Shows navigation button' />
                 </a>
               </Link>
             </li>
             <li>
               <Link href='/list'>
-                <a>Song List</a>
+                <a>
+                  <img src={SongList} alt='Song List navigation button' />
+                </a>
               </Link>
             </li>
             <li>
               <Link href='/testimonials'>
                 <a>
-                  {/* <img
+                  <img
                     src={Testimonials}
                     alt='Testimonials navigation button'
-                  /> */}
-                  Testimonials
+                  />
                 </a>
               </Link>
             </li>
             <li>
               <Link href='/media'>
                 <a>
-                  {/* <img src={Media} alt='Media navigation button' /> */}
-                  Media
+                  <img src={Media} alt='Media navigation button' />
                 </a>
               </Link>
             </li>
             <li>
               <Link href='/contact'>
                 <a>
-                  {/* <img src={Contact} alt='Contact navigation button' /> */}
-                  Contact
+                  <img src={Contact} alt='Contact navigation button' />
                 </a>
               </Link>
             </li>
@@ -119,7 +117,25 @@ const TestHeader = _ => {
 
       nav ul li {
         display: inline-block;
+        width: 60px;
       }
+
+      nav ul li:nth-child(2) {
+        width: 75px;
+      }
+
+      nav ul li:nth-child(3) {
+        width: 105px;
+      }
+
+       nav ul li:nth-child(4) {
+        width: 115px;
+      }
+
+      nav ul li:nth-child(6) {
+        width: 95px;
+      }
+
       nav ul li a {
         display: block;
         padding-bottom: 4px;
@@ -134,7 +150,6 @@ const TestHeader = _ => {
         opacity: 0.65;
       }
 
-          /* stroke */
       nav.stroke ul li a {
         position: relative;
       }
@@ -176,6 +191,7 @@ const TestHeader = _ => {
         position: fixed;
         right: 0;
         left: 0;
+        top: 0;
         padding: 5px 0;
         z-index: 3;
       }
@@ -199,7 +215,7 @@ const TestHeader = _ => {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
-        width: 50%;
+        width: 60%;
       }
 
       nav ul a {
@@ -228,14 +244,44 @@ const TestHeader = _ => {
         justify-content: space-between;
       }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1000px) {
+
+          nav .wrapper {
+            background: rgba(44,113,246,0.98);
+          }
+
+          nav ul li {
+            width: 200px;
+          }
+
+           nav ul li:nth-child(2) {
+              width: 225px;
+            }
+
+            nav ul li:nth-child(3) {
+              width: 255px;
+            }
+
+            nav ul li:nth-child(4) {
+              width: 295px;
+            }
+
+            nav ul li:nth-child(6) {
+              width: 255px;
+            }
+
+          nav ul {
+            width: 100%;
+            padding: 0 2%;
+            flex-direction: column;
+          }
          
           nav ul a {
-            color: #53354a; 
+            color: #f1f1f1; 
           }
 
           ul {
-            background-color: #e84545;
+            background: rgba(44,113,246,0.98);
             display: block;
             height: 0;
             list-style-type: none;
@@ -247,32 +293,35 @@ const TestHeader = _ => {
           }
 
           li {
-            border-bottom: 2px solid #53354a;
-            color: #53354a;
+            border-bottom: 2px solid #f1f1f1;
+            color: #f1f1f1;
             display: block;
             font-size: 1.5em;
-            padding: 2em 0;
+            margin: 5px 0;
           }
 
           #menu-toggle:checked ~ ul {
             opacity: 1;
-            height: 100vh;
+            height: 65vh;
             visibility: visible;
+            padding-bottom 100%;
+            margin: 0 auto;
+            margin-top: 50px;
           }
 
           .label-toggle {
             background: linear-gradient(
               to bottom,
-              #e84545 0%,
-              #e84545 20%,
+              #f1f1f1 0%,
+              #f1f1f1 20%,
               transparent 20%,
               transparent 40%,
-              #e84545 40%,
-              #e84545 60%,
+              #f1f1f1 40%,
+              #f1f1f1 60%,
               transparent 60%,
               transparent 80%,
-              #e84545 80%,
-              #e84545 100%
+              #f1f1f1 80%,
+              #f1f1f1 100%
             ); 
            
             cursor: pointer;

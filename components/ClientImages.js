@@ -75,7 +75,6 @@ class ClientImages extends React.Component {
             width: 100%;
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: -100px;
             margin-top: 100px;
             background: white;
             padding: 50px 0;

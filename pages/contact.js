@@ -1,6 +1,7 @@
 import Layout from '../components/MyLayout';
 const contentful = require('contentful');
 import TestHeader from '../components/TestHeader';
+import img from '../assets/contactHead.svg';
 
 export default class About extends React.Component {
   constructor(props) {
@@ -11,7 +12,9 @@ export default class About extends React.Component {
   render() {
     return (
       <Layout>
-        <h1 className='contactNeon'>Get in touch!</h1>
+        <div className='title'>
+          <img src={img} alt='Get in touch with us!' />
+        </div>
         <div className='flex'>
           <div className='flexOne'>
             <p>
@@ -68,6 +71,12 @@ export default class About extends React.Component {
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
 
+          .title {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 18vh;
+          }
+
           .flex {
             display: flex;
             width: 100%;
@@ -79,7 +88,7 @@ export default class About extends React.Component {
             color: #f1f1f1;
             font-family: 'Roboto', sans-serif;
             font-size: 26px;
-            line-height: 50px;
+            line-height: 40px;
           }
 
           a {
@@ -89,10 +98,6 @@ export default class About extends React.Component {
 
           a:hover {
             opacity: 0.65;
-          }
-
-          .contactNeon {
-            margin-top: 25vh;
           }
 
           .flexOne,

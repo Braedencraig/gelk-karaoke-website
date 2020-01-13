@@ -12,6 +12,7 @@ import {
 } from 'react-scroll';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import img from '../assets/songListHead.svg';
 
 const ColorCircularProgress = withStyles({
   root: {
@@ -101,7 +102,9 @@ export default class List extends React.Component {
     return (
       <Layout>
         <div className='listWrapper'>
-          <h1 className='contactNeon'>SONG LIST</h1>
+          <div className='title'>
+            <img src={img} alt='Song List' />
+          </div>
           <p className='alphabet'>
             {this.state.alphabet.map((letter, i) => {
               return (
@@ -141,7 +144,11 @@ export default class List extends React.Component {
             color: #f1f1f1;
           }
           .listWrapper {
-            margin-top: 25vh;
+            margin-top: 18vh;
+          }
+          .title {
+            width: 80%;
+            margin: 0 auto;
           }
 
           .letter {

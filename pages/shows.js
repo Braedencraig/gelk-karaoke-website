@@ -4,6 +4,7 @@ import TestHeader from '../components/TestHeader';
 import Link from 'next/link';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import img from '../assets/upcomingShowsHead.svg';
 
 const ColorCircularProgress = withStyles({
   root: {
@@ -52,7 +53,7 @@ export default class Shows extends React.Component {
                     transition: all 0.4s;
                   }
                   p {
-                    text-align: left;
+                    text-align: center;
                   }
 
                   a:hover {
@@ -69,8 +70,10 @@ export default class Shows extends React.Component {
     return (
       <Layout>
         <div className='listWrapper'>
-          <h1 className='contactNeon'>UPCOMING SHOWS</h1>
-          <h4>click a show for more info / tickets</h4>
+          <div className='title'>
+            <img src={img} alt='Upcoming Shows' />
+          </div>
+          <h4>Click a show for more info</h4>
           <div className='shows'>
             {this.state.shows.length === 0 ? (
               <ColorCircularProgress size={100} thickness={5} />
@@ -80,18 +83,6 @@ export default class Shows extends React.Component {
           </div>
         </div>
         <style jsx>{`
-          h1 {
-            white-space: nowrap;
-            margin: 0 -5px 0 0;
-            letter-spacing: 5px;
-            line-height: 1;
-            font-size: 7vw;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 100;
-            text-align: center;
-            color: #f1f1f1;
-          }
-
           h4 {
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
@@ -100,12 +91,13 @@ export default class Shows extends React.Component {
             color: #f1f1f1;
           }
 
-          .contactNeon {
-            margin-bottom: 70px;
+          .listWrapper {
+            margin-top: 18vh;
           }
 
-          .listWrapper {
-            margin-top: 25vh;
+          .title {
+            width: 80%;
+            margin: 0 auto;
           }
 
           .shows {

@@ -4,6 +4,8 @@ import ClientImages from '../components/ClientImages';
 import TestHeader from '../components/TestHeader';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import video from '../assets/videosHead.svg';
+import photos from '../assets/photosHead.svg';
 
 const ColorCircularProgress = withStyles({
   root: {
@@ -103,13 +105,11 @@ export default class About extends React.Component {
                   font-size: 24px;
                   font-weight: 700;
                   color: #f1f1f1;
-                  text-align: center;
                 }
 
                 .pictures {
                   width: 30%;
                   margin: 25px auto;
-                  position: relative;
                 }
 
                 .pictures .top {
@@ -123,7 +123,9 @@ export default class About extends React.Component {
                 }
 
                 .bottom {
-                  margin-top: -15px;
+                  margin-top: -20px;
+                  max-width: 300px;
+                  text-align: center;
                 }
               `}</style>
             </>
@@ -135,7 +137,9 @@ export default class About extends React.Component {
     return (
       <Layout>
         <div className='wrapper'>
-          <h2 className='clientTitle'>PICTURES</h2>
+          <div className='title'>
+            <img src={photos} alt='Photographs of Good enough live karaoke' />
+          </div>
           <div className='flexIt'>
             {this.state.media.length === 0 ? (
               <ColorCircularProgress size={100} thickness={5} />
@@ -143,7 +147,9 @@ export default class About extends React.Component {
               pictures
             )}
           </div>
-          <h2 className='clientTitleTest'>VIDEOS</h2>
+          <div className='title video'>
+            <img src={video} alt='Videos of good enough live karaoke' />
+          </div>
           <div className='flexIt'>
             {' '}
             {this.state.media.length === 0 ? (
@@ -165,28 +171,17 @@ export default class About extends React.Component {
               padding: 50px;
               min-height: 55vh;
               max-width: 1400px;
-            }
-            h1,
-            h2 {
-              white-space: nowrap;
-              margin: 0 -5px 0 0;
-              letter-spacing: 5px;
-              line-height: 1;
-              font-size: 7vw;
-              font-family: 'Roboto', sans-serif;
-              font-weight: 100;
-              text-align: center;
-              color: #fee;
-              text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em blue, 0 0 0.5em blue,
-                0 0 0.1em blue, 0 10px 3px #000;
+              margin-bottom: 50px;
             }
 
-            h1 {
+            .title {
+              width: 80%;
+              margin: 0 auto;
               margin-bottom: 50px;
             }
 
             .wrapper {
-              margin-top: 20vh;
+              margin-top: 18vh;
             }
 
             .clientTitle {
