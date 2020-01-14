@@ -53,7 +53,7 @@ export default class Shows extends React.Component {
                     transition: all 0.4s;
                   }
                   p {
-                    text-align: center;
+                    text-align: left;
                   }
 
                   a:hover {
@@ -103,7 +103,7 @@ export default class Shows extends React.Component {
           .shows {
             font-family: 'Roboto', sans-serif;
             margin: 0 auto;
-            text-align: center;
+            text-align: left;
             font-size: 28px;
             color: #f1f1f1;
             min-height: 55vh;

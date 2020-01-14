@@ -125,21 +125,22 @@ const Index = props => (
         <h2>We play, YOU SING!&trade;</h2>
         <p>
           Good Enough Live Karaoke is Toronto's most popular live band karaoke
-          experience letting anyone with the desire and guts to join them on
-          stage, take the mic and sing! A live band featuring guitars, bass,
-          keyboards and drums, Good Enough’s repertoire of over 400 songs spans
-          genres and eras. Hit us up at{' '}
+          experience, letting anyone with the desire and guts to join us on
+          stage, take the mic and sing! Ideal for corporate events, birthday
+          parties and weddings, Good Enough is a live band featuring guitars,
+          bass, keyboards and drums, and a repertoire of over 400 songs spanning
+          genres and eras. Get in touch at{' '}
           <a
             href='mailto:sing@goodenoughlivekaraoke.com?Subject=Hello%20'
             target='_top'
           >
             sing@goodenoughlivekaraoke.com
           </a>{' '}
-          to book your event. And follow us on Instagram to see weekly public
-          shows across Ontario. Since 2013, the band has played thousands of
-          hours on stage at private and public events with its unique,
-          interactive rock'n'roll experience. It’s a bit terrifying, hugely
-          exhilarating and completely awesome!
+          to book your event, and follow us on Instagram to see weekly public
+          shows across Ontario. Since 2013, we have played thousands of hours on
+          stage at private and public events with our unique, interactive
+          rock'n'roll experience. It’s a bit terrifying, hugely exhilarating and
+          completely awesome!
         </p>
       </div>
     </>

@@ -18,10 +18,12 @@ export default class About extends React.Component {
         <div className='flex'>
           <div className='flexOne'>
             <p>
-              Let GOOD ENOUGH LIVE KARAOKE make your next team-building or
-              corporate event, wedding or birthday party a creative and
-              invigorating experience with live band karaoke. Please let us know
-              if you have any questions or would like a quote.{' '}
+              Ideal for corporate events, team-building, holiday parties, client
+              appreciation nights, weddings, birthdays or other personal
+              milestones, live band karaoke with Good Enough Live Karaoke is an
+              epic, interactive entertainment experience. We'll make sure your
+              next party or event is completely awesome. Please let us know if
+              you have any questions or would like a quote:{' '}
               <a
                 href='mailto:sing@goodenoughlivekaraoke.com?Subject=Hello%20'
                 target='_top'
