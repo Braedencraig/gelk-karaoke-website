@@ -75,6 +75,28 @@ export default class About extends React.Component {
                 .bottom {
                   margin-top: -15px;
                 }
+                @media screen and (max-width: 800px) {
+                  p {
+                    font-size: 20px;
+                  }
+                  .title {
+                    width: 90%;
+                  }
+                }
+                @media screen and (max-width: 650px) {
+                  .pictures {
+                    width: 300px;
+                  }
+                  .bottom {
+                    margin-top: -15px;
+                  }
+                }
+
+                @media screen and (max-width: 600px) {
+                  p {
+                    font-size: 16px;
+                  }
+                }
               `}</style>
             </>
           );
@@ -133,6 +155,33 @@ export default class About extends React.Component {
                     margin: 0 auto;
                   }
                 }
+
+                @media screen and (max-width: 800px) {
+                  p {
+                    font-size: 20px;
+                  }
+                  .title {
+                    width: 90%;
+                  }
+                }
+
+                @media screen and (max-width: 650px) {
+                  .pictures {
+                    width: 300px;
+                  }
+                  .bottom {
+                    margin-top: -15px;
+                  }
+                  .flexIt {
+                    width: 57%;
+                  }
+                }
+
+                @media screen and (max-width: 600px) {
+                  p {
+                    font-size: 16px;
+                  }
+                }
               `}</style>
             </>
           );
@@ -167,10 +216,10 @@ export default class About extends React.Component {
           <style jsx>{`
             @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
             .flexIt {
-              border: 5px solid #f1f1f1;
+              border: 10px solid #f1f1f1;
               border-radius: 25px;
               display: flex;
-              width: 80%;
+              width: 70%;
               flex-wrap: wrap;
               justify-content: center;
               margin: 0 auto;
@@ -186,6 +235,10 @@ export default class About extends React.Component {
               margin-bottom: 50px;
             }
 
+            .video {
+              margin-top: 100px;
+            }
+
             .wrapper {
               margin-top: 18vh;
             }
@@ -196,6 +249,15 @@ export default class About extends React.Component {
             .clientTitleTest {
               margin-top: 150px;
               margin-bottom: 80px;
+            }
+
+            @media screen and (max-width: 800px) {
+              .title {
+                width: 90%;
+              }
+              .flexIt {
+                width: 57%;
+              }
             }
           `}</style>
         </div>

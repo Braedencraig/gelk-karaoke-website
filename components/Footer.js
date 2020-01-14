@@ -83,6 +83,7 @@ class Footer extends React.Component {
             color: #f1f1f1;
             margin: 0 auto;
             font-family: Roboto, sans-serif;
+            font-size: 16px;
           }
 
           svg {
@@ -108,6 +109,21 @@ class Footer extends React.Component {
 
           .flexTwo a {
             margin: 0px 10px;
+          }
+
+          @media screen and (max-width: 550px) {
+            .flexContainer {
+              flex-direction: column-reverse;
+            }
+
+            .flexOne,
+            .flexTwo {
+              margin: 0 auto;
+            }
+
+            .flexOne {
+              margin-bottom: 5px;
+            }
           }
         `}</style>
       </div>

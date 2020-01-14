@@ -104,10 +104,12 @@ export default class Shows extends React.Component {
             font-family: 'Roboto', sans-serif;
             margin: 0 auto;
             text-align: center;
-            font-size: 26px;
+            font-size: 28px;
             color: #f1f1f1;
             min-height: 55vh;
-            width: 65%;
+            width: 70%;
+            line-height: 38px;
+            margin-bottom: 50px;
           }
 
           p {
@@ -119,6 +121,26 @@ export default class Shows extends React.Component {
 
           a:hover {
             text-decoration: underline;
+          }
+
+          @media screen and (max-width: 900px) {
+            .shows {
+              font-size: 22px;
+            }
+          }
+
+          @media screen and (max-width: 650px) {
+            .title {
+              width: 90%;
+            }
+
+            p {
+              font-size: 14px;
+            }
+            .shows {
+              font-size: 16px;
+              width: 85%;
+            }
           }
         `}</style>
       </Layout>

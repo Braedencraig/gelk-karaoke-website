@@ -9,22 +9,24 @@
 
 .slick-slide img {
     margin: 0 auto;
-    border: 2px solid #f1f1f1;
+    border: 10px solid #f1f1f1;
     border-radius: 5px;
     -webkit-border-radius: 25px;
     height: 500px;
     width: 750px;
 }
 
+
+
 .slick-prev:before,
 .slick-next:before {
     color: #f1f1f1;
 }
 
-@media screen and (max-width: 1015px) {
+@media screen and (max-width: 1075px) {
     .slick-slide img {
         margin: 0 auto;
-        border: 2px solid #f1f1f1;
+        border: 10px solid #f1f1f1;
         border-radius: 5px;
         -webkit-border-radius: 25px;
         height: 350px;
@@ -33,5 +35,41 @@
 
     .slick-track {
         height: 50vh;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .container {
+        padding: 0;
+        width: 75%;
+    }
+
+    .slick-slide img {
+        height: 300px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 557px) {
+    .slick-slide img {
+        height: 250px;
+        width: 290px;
+        margin-top: 60px;
+    }
+
+    .container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container {
+        width: 80%;
+    }
+
+    .slick-slide img {
+        height: 220px;
+        width: 250px;
+        margin-top: 80px;
     }
 }

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import Home from '../assets/home.svg';
 import Shows from '../assets/shows.svg';
-import Testimonials from '../assets/testimonials.svg';
+import Clients from '../assets/clients.svg';
 import Media from '../assets/media.svg';
 import Contact from '../assets/contact.svg';
 import SongList from '../assets/songlist.svg';
@@ -84,12 +84,9 @@ const TestHeader = _ => {
               </Link>
             </li>
             <li>
-              <Link href='/testimonials'>
+              <Link href='/clients'>
                 <a>
-                  <img
-                    src={Testimonials}
-                    alt='Testimonials navigation button'
-                  />
+                  <img src={Clients} alt='Clients navigation button' />
                 </a>
               </Link>
             </li>
@@ -129,7 +126,11 @@ const TestHeader = _ => {
       }
 
        nav ul li:nth-child(4) {
-        width: 115px;
+        width: 90px;
+      }
+
+        nav ul li:nth-child(5) {
+        width: 65px;
       }
 
       nav ul li:nth-child(6) {
@@ -244,6 +245,7 @@ const TestHeader = _ => {
         justify-content: space-between;
       }
 
+
         @media screen and (max-width: 1015px) {
 
           nav .wrapper {
@@ -251,7 +253,7 @@ const TestHeader = _ => {
           }
 
           nav ul li {
-            width: 200px;
+            width: 190px;
           }
 
            nav ul li:nth-child(2) {
@@ -259,11 +261,15 @@ const TestHeader = _ => {
             }
 
             nav ul li:nth-child(3) {
-              width: 255px;
+              width: 275px;
             }
 
             nav ul li:nth-child(4) {
-              width: 295px;
+              width: 265px;
+            }
+
+             nav ul li:nth-child(5) {
+              width: 200px;
             }
 
             nav ul li:nth-child(6) {

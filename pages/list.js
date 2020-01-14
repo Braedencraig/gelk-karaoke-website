@@ -160,8 +160,9 @@ export default class List extends React.Component {
             width: 600px;
             margin: 0 auto;
             text-align: center;
-            font-size: 26px;
+            font-size: 28px;
             min-height: 55vh;
+            margin-bottom: 50px;
           }
 
           .alphabet {
@@ -172,7 +173,7 @@ export default class List extends React.Component {
           }
           p {
             color: #f1f1f1;
-            font-size: 20px;
+            font-size: 28px;
             display: flex;
             justify-content: center;
           }
@@ -183,6 +184,7 @@ export default class List extends React.Component {
             margin: 10px;
             font-family: 'Roboto', sans-serif;
             color: #f1f1f1;
+            font-size: 28px;
           }
 
           a:hover {
@@ -191,7 +193,40 @@ export default class List extends React.Component {
 
           @media screen and (max-width: 1015px) {
             .alphabet {
-              top: 80px;
+              top: 90px;
+              flex-wrap: wrap;
+              display: flex;
+              font-size: 20px;
+              width: 75%;
+              margin: 50px auto;
+              padding: 20px 0;
+            }
+            p,
+            .list {
+              font-size: 20px;
+            }
+            h3 {
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+          }
+
+          @media screen and (max-width: 1015px) {
+            .title {
+              width: 100%;
+            }
+          }
+
+          @media screen and (max-width: 700px) {
+            p,
+            .list {
+              font-size: 16px;
+              width: 70%;
+            }
+
+            p .alphabet,
+            a {
+              font-size: 16px;
             }
           }
         `}</style>

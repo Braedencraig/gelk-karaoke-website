@@ -87,7 +87,7 @@ export default class About extends React.Component {
           p {
             color: #f1f1f1;
             font-family: 'Roboto', sans-serif;
-            font-size: 26px;
+            font-size: 28px;
             line-height: 40px;
           }
 
@@ -126,22 +126,13 @@ export default class About extends React.Component {
             text-align: center;
             color: #f1f1f1;
           }
-          /* section styling */
 
           #contact {
             padding: 0 20px;
             border-radius: 2px;
             margin-bottom: 50px;
           }
-          @media only screen and (max-width: 900px) {
-            h1 {
-              font-size: 12vw;
-            }
-            #contact {
-              width: 70%;
-            }
-          }
-          /* form styling */
+
           form {
             padding: 5%;
             display: grid;
@@ -151,7 +142,6 @@ export default class About extends React.Component {
             width: 100%;
             border-radius: 5px;
           }
-          /* fieldset styling */
           fieldset {
             height: 100%;
             width: 94.5%;
@@ -159,7 +149,6 @@ export default class About extends React.Component {
             border: none;
             overflow: hidden;
           }
-          /* input styling */
           input {
             outline: none;
             padding: 20px 5px 10px 5px;
@@ -212,7 +201,6 @@ export default class About extends React.Component {
             left: 0;
             transition: all 0.3s ease;
           }
-          /* form animation */
           input:focus + label {
             border: none;
           }
@@ -242,7 +230,6 @@ export default class About extends React.Component {
           textarea:focus + label::after {
             transform: translateX(0%);
           }
-          /* button styling */
           button,
           button:hover {
             transition: 0.5s;
@@ -271,6 +258,12 @@ export default class About extends React.Component {
             display: none;
           }
 
+          @media screen and (max-width: 1150px) {
+            .flexOne p {
+              font-size: 23px;
+            }
+          }
+
           @media screen and (max-width: 1015px) {
             .flex {
               flex-direction: column;
@@ -289,6 +282,36 @@ export default class About extends React.Component {
             .flexTwo {
               margin: 0 8%;
               width: 75%;
+            }
+          }
+
+          @media only screen and (max-width: 900px) {
+            h1 {
+              font-size: 12vw;
+            }
+          }
+
+          @media only screen and (max-width: 900px) {
+            .flexOne p {
+              font-size: 20px;
+            }
+          }
+          @media only screen and (max-width: 600px) {
+            .flexOne p {
+              font-size: 16px;
+            }
+
+            .title {
+              width: 90%;
+            }
+          }
+
+          @media only screen and (max-width: 380px) {
+            .flexOne p {
+              font-size: 14px;
+            }
+            label {
+              font-size: 14px;
             }
           }
         `}</style>

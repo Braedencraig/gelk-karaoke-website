@@ -7,7 +7,7 @@ import * as Scroll from 'react-scroll';
 import Carousel from '../components/Carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img from '../assets/GelkLogo.png';
+import img from '../assets/gelkHeader.svg';
 
 import {
   Link,
@@ -147,7 +147,7 @@ const Index = props => (
       .introText {
         max-width: 1400px;
         font-family: 'Roboto', sans-serif;
-        font-size: 24px;
+        font-size: 28px;
         color: #f1f1f1;
         width: 80%;
         margin: 0 auto;
@@ -177,9 +177,54 @@ const Index = props => (
         margin-top: -100px;
       }
 
-      @media screen and (max-width: 1015px) {
+      @media screen and (max-width: 1075px) {
         .introText h2 {
-          font-size: 45px;
+          font-size: 30px;
+        }
+
+        .introText {
+          font-size: 20px;
+        }
+
+        .introText p {
+          line-height: 36px;
+        }
+      }
+
+      @media screen and (max-width: 690px) {
+        .gelkLogo {
+          margin-top: 25vh;
+        }
+
+        .chevron {
+          margin-top: 50px;
+        }
+        .introText h2 {
+          font-size: 30px;
+          margin-top: -80px;
+          margin-bottom: 30px;
+        }
+
+        .introText {
+          font-size: 16px;
+        }
+
+        .introText p {
+          line-height: 32px;
+        }
+      }
+
+      @media screen and (max-width: 557px) {
+        svg {
+          width: 30px;
+        }
+
+        .introText h2 {
+          font-size: 22px;
+        }
+
+        .gelkLogo {
+          width: 90%;
         }
       }
     `}</style>

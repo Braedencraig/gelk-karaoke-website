@@ -58,7 +58,7 @@ class ClientImages extends React.Component {
         <style jsx>{`
           .clientImages img {
             width: 150px;
-            height: 70px;
+            height: 82px;
             border: none;
             border-radius: 5px;
             padding: 10px;
@@ -69,10 +69,10 @@ class ClientImages extends React.Component {
           }
 
           .flexContainer {
-            border: 5px solid #f1f1f1;
+            border: 10px solid #f1f1f1;
             border-radius: 25px;
             display: flex;
-            width: 100%;
+            width: 95%;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 100px;
@@ -91,6 +91,12 @@ class ClientImages extends React.Component {
             background: none;
             padding: 50px 0;
             min-height: 55vh;
+          }
+
+          @media screen and (max-width: 700px) {
+            .flexContainer {
+              margin-top: 200px;
+            }
           }
         `}</style>
       </div>
