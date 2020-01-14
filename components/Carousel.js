@@ -198,6 +198,13 @@ class Carousel extends React.Component {
               font-size: 16px;
             }
           }
+
+          @media screen and (max-width: 340px) {
+            p {
+              text-align: left;
+              margin-top: 2px;
+            }
+          }
         `}</style>
       </div>
     );

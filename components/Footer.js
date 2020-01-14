@@ -103,8 +103,8 @@ class Footer extends React.Component {
             padding: 5px 5%;
           }
 
-          .flexOne {
-            margin-top: 8px;
+          .flexTwo {
+            margin-bottom: 8px;
           }
 
           .flexTwo a {
@@ -121,8 +121,8 @@ class Footer extends React.Component {
               margin: 0 auto;
             }
 
-            .flexOne {
-              margin-bottom: 5px;
+            .flexTwo {
+              margin-bottom: 15px;
             }
           }
         `}</style>

@@ -251,30 +251,6 @@ const TestHeader = _ => {
             background: rgba(44,113,246,0.98);
           }
 
-          nav ul li {
-            width: 190px;
-          }
-
-           nav ul li:nth-child(2) {
-              width: 225px;
-            }
-
-            nav ul li:nth-child(3) {
-              width: 275px;
-            }
-
-            nav ul li:nth-child(4) {
-              width: 265px;
-            }
-
-             nav ul li:nth-child(5) {
-              width: 200px;
-            }
-
-            nav ul li:nth-child(6) {
-              width: 255px;
-            }
-
           nav ul {
             width: 100%;
             padding: 0 2%;
@@ -345,7 +321,6 @@ const TestHeader = _ => {
       @media screen and (max-width: 1000px) {
         ul {
           transition: all 1s ease;
-
         }
       }
     `}</style>

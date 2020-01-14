@@ -189,6 +189,10 @@ const Index = props => (
         .introText p {
           line-height: 36px;
         }
+
+        .gelkLogo {
+          margin-top: 33%;
+        }
       }
 
       @media screen and (max-width: 690px) {
@@ -201,7 +205,7 @@ const Index = props => (
         }
         .introText h2 {
           font-size: 30px;
-          margin-top: -80px;
+          margin-top: -70px;
           margin-bottom: 30px;
         }
 
@@ -225,6 +229,9 @@ const Index = props => (
 
         .gelkLogo {
           width: 90%;
+        }
+        .gelkLogo {
+          margin-top: 33vh;
         }
       }
     `}</style>

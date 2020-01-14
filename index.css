@@ -33,6 +33,10 @@
         width: 500px;
     }
 
+    .slick-slide img {
+        margin-top: 60px;
+    }
+
     .slick-track {
         height: 50vh;
     }
@@ -71,5 +75,13 @@
         height: 220px;
         width: 250px;
         margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .slick-slide img {
+        height: 150px;
+        width: 200px;
+        margin-top: 48px;
     }
 }
