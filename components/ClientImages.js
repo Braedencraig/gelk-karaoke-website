@@ -57,8 +57,8 @@ class ClientImages extends React.Component {
 
         <style jsx>{`
           .clientImages img {
-            width: 150px;
-            height: 82px;
+            max-width: 150px;
+            max-height: 150px;
             border: none;
             border-radius: 5px;
             padding: 10px;

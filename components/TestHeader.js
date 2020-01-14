@@ -62,48 +62,48 @@ const TestHeader = _ => {
           <input type='checkbox' id='menu-toggle' />
           <label htmlFor='menu-toggle' className='label-toggle'></label>
           <ul>
-            <li>
-              <Link href='/'>
+            <Link href='/'>
+              <li>
                 <a>
                   <img src={Home} alt='Home navigation button' />
                 </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/shows'>
+              </li>
+            </Link>
+            <Link href='/shows'>
+              <li>
                 <a>
                   <img src={Shows} alt='Shows navigation button' />
                 </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/list'>
+              </li>
+            </Link>
+            <Link href='/list'>
+              <li>
                 <a>
                   <img src={SongList} alt='Song List navigation button' />
                 </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/clients'>
+              </li>
+            </Link>
+            <Link href='/clients'>
+              <li>
                 <a>
                   <img src={Clients} alt='Clients navigation button' />
                 </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/media'>
+              </li>
+            </Link>
+            <Link href='/media'>
+              <li>
                 <a>
                   <img src={Media} alt='Media navigation button' />
                 </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/contact'>
+              </li>
+            </Link>
+            <Link href='/contact'>
+              <li>
                 <a>
                   <img src={Contact} alt='Contact navigation button' />
                 </a>
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
         </nav>
       </nav>
