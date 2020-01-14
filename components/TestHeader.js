@@ -245,7 +245,6 @@ const TestHeader = _ => {
         justify-content: space-between;
       }
 
-
         @media screen and (max-width: 1015px) {
 
           nav .wrapper {
@@ -293,7 +292,6 @@ const TestHeader = _ => {
             list-style-type: none;
             opacity: 0;
             text-align: center;
-            transition: all 1s ease;
             width: 100%;
             visibility: hidden;
           }
@@ -341,6 +339,13 @@ const TestHeader = _ => {
           .wrapper {
             display: block;
           }
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        ul {
+          transition: all 1s ease;
+
         }
       }
     `}</style>
