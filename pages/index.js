@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SpotifyPlayer from 'react-spotify-player';
 import ClientComp from '../components/clientComp';
+import MediaComp from '../components/mediaComp';
 
 import {
   Link,
@@ -206,6 +207,7 @@ const Index = props => (
           </div>
         </div>
       </div>
+      <MediaComp />
       <ClientComp />
     </>
     <style jsx>{`
