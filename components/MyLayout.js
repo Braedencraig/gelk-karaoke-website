@@ -4,8 +4,8 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 
 const layoutStyle = {
-  background: 'rgba(44,113,246,.98)!important',
-  backgroundColor: 'rgba(44,113,246,.98)!important',
+  background: 'rgb(25,3,22)!important',
+  backgroundColor: 'rgb(24,3,22)!important',
   backgroundSize: 'cover',
   margin: 0,
 };
@@ -18,8 +18,8 @@ const Layout = props => (
     </Head>
     <style jsx global>{`
       body {
-        @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
-        background: rgba(44, 113, 246, 0.98) !important;
+        background: rgb(25, 3, 22) !important;
+        @import url('https://fonts.googleapis.com/css?family=Concert+One|Montserrat&display=swap');
         box-sizing: border-box;
         margin: 0;
         padding: 0;

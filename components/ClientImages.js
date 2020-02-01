@@ -69,13 +69,11 @@ class ClientImages extends React.Component {
           }
 
           .flexContainer {
-            border: 10px solid #f1f1f1;
-            border-radius: 25px;
             display: flex;
             width: 95%;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 100px;
+            margin-top: 120px;
             background: white;
             padding: 50px 0;
             min-height: 55vh;

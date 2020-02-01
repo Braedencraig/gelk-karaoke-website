@@ -7,7 +7,8 @@ import * as Scroll from 'react-scroll';
 import Carousel from '../components/Carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img from '../assets/rockOn.png';
+import SpotifyPlayer from 'react-spotify-player';
+import ClientComp from '../components/clientComp';
 
 import {
   Link,
@@ -18,17 +19,28 @@ import {
   scroller,
 } from 'react-scroll';
 
+const size = {
+  width: '90%',
+  height: 700,
+};
+const view = 'list'; // or 'coverart'
+const theme = 'black'; // or 'white'
+
 const Index = props => (
   <Layout>
-    {/* <NeonLogo></NeonLogo> */}
-    <div className='gelkLogo'>
-      <img
-        className='gelkImageLogo'
-        src={img}
-        alt="Good Enough Live Karaoke's Logo"
-      />
-      <p className='neon'></p>
-    </div>
+    <header>
+      <div id='text' className='scrollBox'></div>
+      <div className='gelkLogo'>
+        <img
+          className='gelkImageLogo'
+          src='/testNeon.gif'
+          alt='good enough live karaoke neon logo'
+        />
+      </div>
+      <div className='songButton'>
+        <a href='/list'>View Song List</a>
+      </div>
+    </header>
     <div className='chevron'>
       <Link
         className='scrollChevron'
@@ -38,8 +50,8 @@ const Index = props => (
         duration={500}
       >
         <svg
-          height='50px'
-          width='50px'
+          height='40px'
+          width='40px'
           fill='#F1F1F1'
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
@@ -55,19 +67,51 @@ const Index = props => (
     </div>
     <style jsx>{`
 
+    .songButton {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4%;
+    }
+
+    .songButton a {
+      background: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 3px solid #f1f1f1;
+      text-align:center;
+      transition: all 0.4s;
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 20px;
+      cursor: pointer
+    }
+
+    .songButton:hover a {
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b, 0 0 0.5em #761f6b,
+          0 0 0.1em #761f6b, 0 10px 3px #000;
+    }
+
+    
+
+    .songButton a:hover {
+      opacity: 1;
+       text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b, 0 0 0.5em #761f6b,
+          0 0 0.1em #761f6b, 0 10px 3px #000;
+    }
+
     .gelkImageLogo {
       display: block;
       width: 100%;
       height: auto;
+      max-height: 800px;
     }
 
     .gelkLogo {
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
-      margin-top: 10%;
+      margin-top: 3%;
       max-width: 1400px;
-      background: url('../assets/neonSign.gif')
-
+      margin-bottom: 2.5%;
     }
       svg:hover {
         fill: rgba(241,241,241, 0.6);
@@ -79,7 +123,7 @@ const Index = props => (
       }
       h1,
       a {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;
       }
 
       ul {
@@ -102,8 +146,11 @@ const Index = props => (
       .chevron {
         margin-bottom: 200px;
         display: flex;
-        width: 100%;
-        justify-content: center;
+        width: 94%;
+        justify-content: flex-end;
+        position: fixed;
+        top: 88vh;
+        transform: scale(1, -1)
       }
 
       .wrapper {
@@ -122,45 +169,98 @@ const Index = props => (
       }
     `}</style>
     <>
-      <div id='text' className='scrollBox'></div>
-      <Carousel />
-
-      <div className='introText'>
-        <h2>We play, YOU SING!&trade;</h2>
-        <p>
-          Good Enough Live Karaoke is Toronto's most popular live band karaoke
-          experience, letting anyone with the desire and guts to join us on
-          stage, take the mic and sing! Ideal for corporate events, birthday
-          parties and weddings, Good Enough is a live band featuring guitars,
-          bass, keyboards and drums, and a repertoire of over 400 songs spanning
-          genres and eras. Get in touch at{' '}
-          <a
-            href='mailto:sing@goodenoughlivekaraoke.com?Subject=Hello%20'
-            target='_top'
-          >
-            sing@goodenoughlivekaraoke.com
-          </a>{' '}
-          to book your event, and follow us on Instagram to see weekly public
-          shows across Ontario. Since 2013, we have played thousands of hours on
-          stage at private and public events with our unique, interactive
-          rock'n'roll experience. It’s a bit terrifying, hugely exhilarating and
-          completely awesome!
-        </p>
+      {/* <Carousel /> */}
+      <div className='spotifyAbout'>
+        <div className='flexOneSide'>
+          <div className='introText'>
+            <h3>About GELK</h3>
+            <p>
+              Good Enough Live Karaoke is Toronto's most popular live band
+              karaoke experience, letting anyone with the desire and guts to
+              join us on stage, take the mic and sing! Ideal for corporate
+              events, birthday parties and weddings, Good Enough is a live band
+              featuring guitars, bass, keyboards and drums, and a repertoire of
+              over 400 songs spanning genres and eras. Get in touch at{' '}
+              <a
+                href='mailto:sing@goodenoughlivekaraoke.com?Subject=Hello%20'
+                target='_top'
+              >
+                sing@goodenoughlivekaraoke.com
+              </a>{' '}
+              to book your event, and follow us on Instagram to see weekly
+              public shows across Ontario. Since 2013, we have played thousands
+              of hours on stage at private and public events with our unique,
+              interactive rock'n'roll experience. It’s a bit terrifying, hugely
+              exhilarating and completely awesome!
+            </p>
+          </div>
+        </div>
+        <div className='flexTwoSide'>
+          <div className='spotify'>
+            <SpotifyPlayer
+              uri='spotify:playlist:4QmX44dyzZa6kObYm5jXzS'
+              size={size}
+              view={view}
+              theme={theme}
+            />
+          </div>
+        </div>
       </div>
+      <ClientComp />
     </>
     <style jsx>{`
-      .introText {
-        max-width: 1400px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 28px;
-        color: #f1f1f1;
-        width: 80%;
-        margin: 0 auto;
+      @import url('https://fonts.googleapis.com/css?family=Concert+One|Montserrat&display=swap');
+
+      h3 {
+        text-align:center;
+        font-family: 'Concert One', sans-serif;
+        color: #e53441;
+        font-size: 40px;
       }
 
+      .spotify {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin: 2% 0;
+      }
+
+      .spotifyAbout {
+        display: flex;
+        width: 100%;
+      }
+
+      .flexOneSide {
+        width: 60%;
+        padding: 2%;
+        background: #f1f1f1;
+      }
+
+      .flexTwoSide {
+        background: #e53441;
+        width: 40%;
+        padding: 2%;
+      }
+
+      .introText {
+        max-width: 1400px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        color: rgb(25,3,22);
+        font-weight: bold;
+      }
+
+      .introText a {
+        color: rgb(25,3,22) !important;
+      }
+
+      .introText a:hover {
+        color: #e53441 !important;
+      }
+
+
       a {
-        color: #f1f1f1;
-        font-family: 'Roboto', sans-serif;
+        color: rgb(25,3,22)
         text-decoration: underline;
         cursor: pointer;
         transition: all 0.4s;
@@ -176,15 +276,18 @@ const Index = props => (
         text-align: left;
       }
 
-      .introText h2 {
+      h2 {
         text-align: center;
         font-size: 70px;
         margin-top: -100px;
+        font-family: 'Concert One', cursive;
+        color: #f1f1f1;
       }
 
       @media screen and (max-width: 1075px) {
         .introText h2 {
           font-size: 30px;
+          font-family: 'Concert One', cursive;
         }
 
         .introText {

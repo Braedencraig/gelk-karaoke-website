@@ -102,9 +102,7 @@ export default class List extends React.Component {
     return (
       <Layout>
         <div className='listWrapper'>
-          <div className='title'>
-            <img src={img} alt='Song List' />
-          </div>
+          <h1 className='contactNeon'>UPCOMING SHOWS</h1>
           <p className='alphabet'>
             {this.state.alphabet.map((letter, i) => {
               return (
@@ -138,10 +136,12 @@ export default class List extends React.Component {
             letter-spacing: 5px;
             line-height: 1;
             font-size: 7vw;
-            font-family: 'Roboto', sans-serif;
+            font-family: vibur;
             font-weight: 100;
             text-align: center;
-            color: #f1f1f1;
+            color: #fee;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em limegreen,
+              0 0 0.5em limegreen, 0 0 0.1em limegreen, 0 10px 3px #000;
           }
           .listWrapper {
             margin-top: 18vh;
