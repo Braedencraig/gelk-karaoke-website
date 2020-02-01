@@ -7,7 +7,7 @@ import * as Scroll from 'react-scroll';
 import Carousel from '../components/Carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img from '../assets/gelkHeader.svg';
+import img from '../assets/rockOn.png';
 
 import {
   Link,
@@ -27,6 +27,7 @@ const Index = props => (
         src={img}
         alt="Good Enough Live Karaoke's Logo"
       />
+      <p className='neon'></p>
     </div>
     <div className='chevron'>
       <Link
@@ -65,6 +66,8 @@ const Index = props => (
       margin: 0 auto;
       margin-top: 10%;
       max-width: 1400px;
+      background: url('../assets/neonSign.gif')
+
     }
       svg:hover {
         fill: rgba(241,241,241, 0.6);
