@@ -102,17 +102,27 @@ export default class About extends React.Component {
 
         .flexContainer {
           display: flex;
-          flex-direction: row-reverse;
+          flex-direction: column-reverse;
+          width: 100%;
         }
 
         .flexTwo {
           background: #e53441;
-          width: 60%;
+          width: 100%;
         }
 
         .flexOne {
-          width: 40%;
+          width: 100%;
           background: white;
+        }
+
+        .flexOne .container {
+          width: 90%;
+        }
+
+        .flexOne .loadPrev .container {
+          width: 90%;
+          margin-bottom: -140px;
         }
 
 
