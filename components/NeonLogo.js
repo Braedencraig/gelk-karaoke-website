@@ -4,9 +4,9 @@ const NeonLogo = () => (
   <>
     <header className='wrapper'>
       <div className='logoNeon'>
-        {/* <b>
+        <b>
           Good <span>Enough </span>Li<span>ve</span> Karaoke
-        </b> */}
+        </b>
         <img src={img} alt="Good Enough Live Karaoke's Logo" />
       </div>
     </header>

@@ -20,6 +20,7 @@ import {
 
 const Index = props => (
   <Layout>
+    {/* <NeonLogo></NeonLogo> */}
     <div className='gelkLogo'>
       <img
         className='gelkImageLogo'
