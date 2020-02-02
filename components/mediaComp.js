@@ -193,7 +193,8 @@ export default class About extends React.Component {
       <div className='wrapper'>
         <div className='title'>
           <h3>
-            PHOTOS AND VIDEOS do masonry style layout for photos and videos
+            PHOTOS AND VIDEOS do masonry style layout for photos and videos song
+            list button hover stuff
           </h3>
         </div>
         <div className='flexIt'>

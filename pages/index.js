@@ -195,6 +195,9 @@ const Index = props => (
               exhilarating and completely awesome!
             </p>
           </div>
+          <div className='listButton'>
+            <a href='/shows'>Upcoming Shows</a>
+          </div>
         </div>
         <div className='flexTwoSide'>
           <div className='spotify'>
@@ -208,10 +211,72 @@ const Index = props => (
         </div>
       </div>
       <MediaComp />
-      <ClientComp />
+      <div className='contactButton'>
+        <a href='/contact'>Contact Us</a>
+      </div>
     </>
     <style jsx>{`
       @import url('https://fonts.googleapis.com/css?family=Concert+One|Montserrat&display=swap');
+
+
+      .contactButton {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .contactButton a {
+      background: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 3px solid #f1f1f1;
+      text-align:center;
+      transition: all 0.4s;
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 30px;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer
+    }
+
+    .contactButton:hover a {
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b, 0 0 0.5em #761f6b,
+          0 0 0.1em #761f6b, 0 10px 3px #000;
+    }
+
+    
+
+    .contactButton a:hover {
+      opacity: 1;
+       text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b, 0 0 0.5em #761f6b,
+          0 0 0.1em #761f6b, 0 10px 3px #000;
+    }
+
+       .listButton {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4%;
+    }
+
+    .listButton a {
+      background: none;
+      font-family: 'Montserrat', sans-serif;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 3px solid #e53441;
+      text-align:center;
+      transition: all 0.4s;
+      color: #e53441;
+      text-decoration: none;
+      font-size: 20px;
+      cursor: pointer
+    }
+
+    .listButton:hover a {
+      opacity: 1;
+      text-shadow: 0 40px 100px, 0 0 2px, 0 0 1em #e53441, 0 0 0.5em #e53441,
+          0 0 0.1em #e53441, 0 10px 3px #f1f1f1;
+    }
 
       h3 {
         text-align:center;

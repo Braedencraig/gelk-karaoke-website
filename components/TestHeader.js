@@ -81,7 +81,7 @@ const TestHeader = _ => {
               <a>Song List</a>
             </li>
           </Link>
-          {/* <Link href='/clients'>
+          <Link href='/clients'>
             <li>
               <a>Clients</a>
             </li>
@@ -90,7 +90,7 @@ const TestHeader = _ => {
             <li>
               <a>Media</a>
             </li>
-          </Link> */}
+          </Link>
           <Link href='/contact'>
             <li>
               <a>Contact</a>
