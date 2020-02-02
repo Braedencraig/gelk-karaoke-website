@@ -234,7 +234,7 @@ const Index = props => (
       transition: all 0.4s;
       color: #f1f1f1;
       text-decoration: none;
-      font-size: 30px;
+      font-size: 20px;
       font-family: 'Montserrat', sans-serif;
       cursor: pointer
     }
