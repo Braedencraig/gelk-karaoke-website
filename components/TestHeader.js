@@ -184,7 +184,7 @@ const TestHeader = _ => {
         left: 0;
         top: 0;
         padding: 5px 0;
-        z-index: 3;
+        z-index: 300;
       }
 
       .logo {
@@ -284,7 +284,7 @@ const TestHeader = _ => {
             visibility: visible;
             padding-bottom 100%;
             margin: 0 auto;
-            margin-top: 50px;
+            margin-top: -20px;
           }
 
           .label-toggle {

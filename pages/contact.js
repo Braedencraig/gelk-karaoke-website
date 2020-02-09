@@ -274,7 +274,7 @@ export default class About extends React.Component {
 
           @media screen and (max-width: 1150px) {
             .flexOne p {
-              font-size: 20px;
+              font-size: 16px;
             }
           }
 
@@ -300,19 +300,19 @@ export default class About extends React.Component {
           }
 
           @media only screen and (max-width: 900px) {
-            h1 {
-              font-size: 12vw;
+            h3 {
+              font-size: 60px;
             }
           }
 
           @media only screen and (max-width: 900px) {
             .flexOne p {
-              font-size: 20px;
+              font-size: 18px;
             }
           }
           @media only screen and (max-width: 600px) {
             .flexOne p {
-              font-size: 16px;
+              font-size: 18px;
             }
 
             .title {
