@@ -6,6 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import video from '../assets/videosHead.svg';
 import photos from '../assets/photosHead.svg';
+import Masonry from 'react-masonry-css';
 
 const ColorCircularProgress = withStyles({
   root: {
@@ -196,7 +197,7 @@ export default class About extends React.Component {
             PHOTOS AND VIDEOS do masonry style layout for photos and videos song
             list button hover stuff do border effects on hover too. MAKE SURE
             IMAGES NOT SQUISHED HEIGHT IS AUTO WHATEVER SAME W VIDEOS. MEDIA AND
-            CLIENT NOT CTA ON HOME PAGE
+            CLIENT NOT CTA ON HOME PAGE ADD ANIMATIONS WITH REACT SPRING
           </h3>
         </div>
         <div className='flexIt'>
@@ -206,14 +207,7 @@ export default class About extends React.Component {
             pictures
           )}
         </div>
-        <div className='flexIt'>
-          {' '}
-          {this.state.media.length === 0 ? (
-            <ColorCircularProgress size={100} thickness={5} />
-          ) : (
-            videos
-          )}
-        </div>
+
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
           .flexIt {

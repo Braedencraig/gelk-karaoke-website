@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import SpotifyPlayer from 'react-spotify-player';
 import ClientComp from '../components/clientComp';
 import MediaComp from '../components/mediaComp';
+import Gallery from '../components/Gallery';
 
 import {
   Link,
@@ -151,6 +152,7 @@ const Index = props => (
         justify-content: flex-end;
         position: fixed;
         top: 88vh;
+        z-index: 100;
         transform: scale(1, -1)
       }
 
@@ -210,7 +212,7 @@ const Index = props => (
           </div>
         </div>
       </div>
-      <MediaComp />
+      <Gallery />
       <div className='contactButton'>
         <a href='/contact'>Contact Us</a>
       </div>
@@ -340,6 +342,7 @@ const Index = props => (
       .introText p {
         line-height: 38px;
         margin-bottom: 50px;
+        font-size: 20px;
         text-align: left;
       }
 
