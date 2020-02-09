@@ -70,7 +70,7 @@ class ClientImages extends React.Component {
 
           .flexContainer {
             display: flex;
-            width: 95%;
+            width: 100%;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 120px;

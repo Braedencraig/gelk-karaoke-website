@@ -166,6 +166,7 @@ const TestHeader = _ => {
         }
         .navBar.scrolled {
           background: rgba(25,3,22, 0.98)!important;
+          z-index: 300;
         }
 
       .singMan {
@@ -250,6 +251,13 @@ const TestHeader = _ => {
          
           nav ul a {
             color: #f1f1f1; 
+            font-size: 60px;
+          }
+
+          svg {
+            width: 50px;
+            height: 50px;
+            margin:0 20px;
           }
 
           ul {
@@ -264,7 +272,6 @@ const TestHeader = _ => {
           }
 
           li {
-            border-bottom: 2px solid #f1f1f1;
             color: #f1f1f1;
             display: block;
             font-size: 1.5em;

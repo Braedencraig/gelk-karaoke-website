@@ -97,7 +97,7 @@ export default class Shows extends React.Component {
               0 0 0.5em limegreen, 0 0 0.1em limegreen, 0 10px 3px #000;
           }
           h4 {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 100;
             text-align: center;
             font-size: 20px;

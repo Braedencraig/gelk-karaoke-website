@@ -6,6 +6,11 @@ const masonryOptions = {
   transitionDuration: 0,
 };
 
+const style = {
+  backgroundColor: 'rgb(25,3,22)',
+  padding: '25px 0px',
+};
+
 const imagesLoadedOptions = { background: '.my-bg-image-el' };
 
 class Gallery extends React.Component {
@@ -40,8 +45,10 @@ class Gallery extends React.Component {
               </div>
               <style jsx>{`
                 .image-element-class {
-                  width: 33.3%;
-                  min-width: 33.3%;
+                  width: calc(33.3% - 40px);
+                  min-width: calc(33.3% - 40px);
+                  background: rgb(25, 3, 22);
+                  padding: 20px;
                 }
                 img {
                   width: 100%;
@@ -63,6 +70,7 @@ class Gallery extends React.Component {
           disableImagesLoaded={false} // default false
           updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
           imagesLoadedOptions={imagesLoadedOptions} // default {}
+          style={style}
         >
           {childElements}
         </Masonry>

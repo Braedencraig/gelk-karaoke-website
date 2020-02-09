@@ -45,8 +45,8 @@ export default class About extends React.Component {
               </div>
               <style jsx>{`
                 p {
-                  font-family: 'Roboto', sans-serif;
-                  font-size: 24px;
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 20px;
                   color: #f1f1f1;
                   width: 80%;
                   margin: 40px auto;
@@ -80,7 +80,7 @@ export default class About extends React.Component {
       <Layout>
         <div className='wrapper'>
           <div className='title client'>
-            <img src={clients} alt='Clients' />
+            <h3>CLIENTS</h3>
           </div>
           {this.state.testimonials.length === 0 ? (
             <div className='loadPrev'>
@@ -92,13 +92,26 @@ export default class About extends React.Component {
             </div>
           )}
           <div className='title testimonial'>
-            <img src={testimonial} alt='Testimonials' />
+            <h3>TESTIMONIALS</h3>
           </div>{' '}
           <div className='testimonialBottom'>{testimonials}</div>
           <style jsx>{`
 
 
-            @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+            h3 {
+              white-space: nowrap;
+            margin: 0 -5px 0 0;
+            letter-spacing: 5px;
+            line-height: 1;
+            font-size: 7vw;
+            font-family: 'Concert One', sans-serif;
+            font-weight: 100;
+            text-align: center;
+            color: #fee;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
+              0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
+            margin-bottom: 80px;
+            }
 
             .testimonialBottom {
               margin-bottom: 50px;

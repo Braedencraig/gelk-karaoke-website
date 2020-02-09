@@ -87,7 +87,7 @@ export default class List extends React.Component {
                         }
                         p {
                           color: #f1f1f1;
-                          font-family: 'Roboto', sans-serif;
+                          font-family: 'Montserrat', sans-serif;
                         }
                       `}</style>
                     </div>
@@ -102,7 +102,7 @@ export default class List extends React.Component {
     return (
       <Layout>
         <div className='listWrapper'>
-          <h1 className='contactNeon'>UPCOMING SHOWS</h1>
+          <h1 className='contactNeon'>SONG LIST</h1>
           <p className='alphabet'>
             {this.state.alphabet.map((letter, i) => {
               return (
@@ -136,12 +136,15 @@ export default class List extends React.Component {
             letter-spacing: 5px;
             line-height: 1;
             font-size: 7vw;
-            font-family: vibur;
+            font-family: 'Concert One', sans-serif;
             font-weight: 100;
             text-align: center;
             color: #fee;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em limegreen,
-              0 0 0.5em limegreen, 0 0 0.1em limegreen, 0 10px 3px #000;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
+              0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 20;
           }
           .listWrapper {
             margin-top: 18vh;
@@ -156,7 +159,7 @@ export default class List extends React.Component {
           }
 
           .list {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             width: 600px;
             margin: 0 auto;
             text-align: center;
@@ -168,8 +171,8 @@ export default class List extends React.Component {
           .alphabet {
             margin: 50px 0;
             position: sticky;
-            top: 60px;
-            background: rgb(44, 113, 246);
+            top: 50px;
+            background: rgb(25, 3, 22);
           }
           p {
             color: #f1f1f1;
@@ -182,7 +185,7 @@ export default class List extends React.Component {
             text-decoration: none;
             text-transform: uppercase;
             margin: 10px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: #f1f1f1;
             font-size: 28px;
           }

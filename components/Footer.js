@@ -81,7 +81,7 @@ class Footer extends React.Component {
           p {
             color: #f1f1f1;
             margin: 0 auto;
-            font-family: Roboto, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 16px;
           }
 

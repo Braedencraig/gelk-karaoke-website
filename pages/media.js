@@ -6,6 +6,8 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import video from '../assets/videosHead.svg';
 import photos from '../assets/photosHead.svg';
+import Gallery from '../components/Gallery';
+import Videos from '../components/Videos';
 
 const ColorCircularProgress = withStyles({
   root: {
@@ -193,28 +195,28 @@ export default class About extends React.Component {
       <Layout>
         <div className='wrapper'>
           <div className='title'>
-            <img src={photos} alt='Photographs of Good enough live karaoke' />
+            <h3>PHOTOS</h3>
           </div>
-          <div className='flexIt'>
-            {this.state.media.length === 0 ? (
-              <ColorCircularProgress size={100} thickness={5} />
-            ) : (
-              pictures
-            )}
+          <Gallery />
+          <div className='title videos'>
+            <h3>VIDEOS</h3>
           </div>
-          <div className='title video'>
-            <img src={video} alt='Videos of good enough live karaoke' />
-          </div>
-          <div className='flexIt'>
-            {' '}
-            {this.state.media.length === 0 ? (
-              <ColorCircularProgress size={100} thickness={5} />
-            ) : (
-              videos
-            )}
-          </div>
+          <Videos />
           <style jsx>{`
-            @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+            h3 {
+              font-family: 'Concert One', sans-serif;
+              white-space: nowrap;
+              position: relative;
+              margin: 0 -5px 0 0;
+              letter-spacing: 5px;
+              line-height: 1;
+              font-size: 7vw;
+              font-weight: 100;
+              text-align: center;
+              color: #fee;
+              text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
+                0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
+            }
             .flexIt {
               border: 10px solid #f1f1f1;
               border-radius: 25px;
@@ -232,7 +234,13 @@ export default class About extends React.Component {
             .title {
               width: 80%;
               margin: 0 auto;
-              margin-bottom: 50px;
+              margin-bottom: 40px;
+              position: relative;
+              z-index: 20;
+            }
+
+            .videos {
+              margin-top: 50px;
             }
 
             .video {

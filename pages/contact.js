@@ -1,7 +1,4 @@
 import Layout from '../components/MyLayout';
-const contentful = require('contentful');
-import TestHeader from '../components/TestHeader';
-import img from '../assets/contactHead.svg';
 
 export default class About extends React.Component {
   constructor(props) {
@@ -13,7 +10,7 @@ export default class About extends React.Component {
     return (
       <Layout>
         <div className='title'>
-          <img src={img} alt='Get in touch with us!' />
+          <h3>GET IN TOUCH</h3>
         </div>
         <div className='flex'>
           <div className='flexOne'>
@@ -71,11 +68,25 @@ export default class About extends React.Component {
           </div>
         </div>
         <style jsx>{`
-          @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+          h3 {
+            font-family: 'Concert One', sans-serif;
+            white-space: nowrap;
+            margin: 0 -5px 0 0;
+            letter-spacing: 5px;
+            line-height: 1;
+            font-size: 7vw;
+            font-weight: 100;
+            text-align: center;
+            color: #fee;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
+              0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
+          }
 
           .title {
-            width: 80%;
+            width: 100%;
+            background: none;
             margin: 0 auto;
+            margin-bottom: 50px;
             margin-top: 18vh;
           }
 
@@ -84,13 +95,14 @@ export default class About extends React.Component {
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
+            background: rgb(25, 3, 22);
           }
 
           p {
             color: #f1f1f1;
-            font-family: 'Roboto', sans-serif;
-            font-size: 28px;
-            line-height: 40px;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 38px;
+            font-size: 20px;
           }
 
           a {
@@ -123,7 +135,7 @@ export default class About extends React.Component {
             letter-spacing: 5px;
             line-height: 1;
             font-size: 7vw;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 100;
             text-align: center;
             color: #f1f1f1;
@@ -169,14 +181,14 @@ export default class About extends React.Component {
             width: 100%;
             border: none;
             resize: none;
-            font: 400 1em/1.2 'Roboto', sans-serif;
+            font: 400 1em/1.2 'Montserrat', sans-serif;
             color: #f1f1f1;
             background: none;
           }
           /* label styling */
           label {
             position: absolute;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: #f1f1f1;
             height: 100%;
             width: 100%;
@@ -241,9 +253,9 @@ export default class About extends React.Component {
             padding: 20px;
             letter-spacing: 2px;
             border-radius: 5px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
-            color: rgba(44, 113, 246, 0.98);
+            color: rgb(25, 3, 22);
             opacity: 1;
             background: #f1f1f1;
           }
@@ -262,7 +274,7 @@ export default class About extends React.Component {
 
           @media screen and (max-width: 1150px) {
             .flexOne p {
-              font-size: 23px;
+              font-size: 20px;
             }
           }
 

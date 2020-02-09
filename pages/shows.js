@@ -53,11 +53,13 @@ export default class Shows extends React.Component {
                     transition: all 0.4s;
                   }
                   p {
-                    text-align: left;
+                    text-align: center;
+                    font-size: 22px;
                   }
 
                   a:hover {
-                    opacity: 0.65;
+                    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
+                      0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
                   }
                 `}</style>
               </>
@@ -71,7 +73,7 @@ export default class Shows extends React.Component {
       <Layout>
         <div className='listWrapper'>
           <div className='title'>
-            <img src={img} alt='Upcoming Shows' />
+            <h3>UPCOMING SHOWS</h3>
           </div>
           <h4>Click a show for more info</h4>
           <div className='shows'>
@@ -83,12 +85,26 @@ export default class Shows extends React.Component {
           </div>
         </div>
         <style jsx>{`
+          h3 {
+            font-family: 'Concert One', sans-serif;
+            white-space: nowrap;
+            margin: 0 -5px 0 0;
+            letter-spacing: 5px;
+            line-height: 1;
+            font-size: 7vw;
+            font-weight: 100;
+            text-align: center;
+            color: #fee;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
+              0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
+          }
           h4 {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 100;
             text-align: center;
             font-size: 20px;
             color: #f1f1f1;
+            margin: 50px 0;
           }
 
           .listWrapper {
@@ -101,7 +117,7 @@ export default class Shows extends React.Component {
           }
 
           .shows {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0 auto;
             text-align: left;
             font-size: 28px;
@@ -109,7 +125,6 @@ export default class Shows extends React.Component {
             min-height: 55vh;
             width: 70%;
             line-height: 38px;
-            margin-bottom: 50px;
           }
 
           p {
