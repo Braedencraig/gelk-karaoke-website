@@ -12,6 +12,7 @@ import ClientComp from '../components/clientComp';
 import MediaComp from '../components/mediaComp';
 import Gallery from '../components/Gallery';
 import ContactComp from '../components/ContactComp';
+import { useSpring, animated } from 'react-spring';
 
 import {
   Link,
@@ -34,6 +35,14 @@ const Index = props => (
   <Layout>
     <div>
       <div id='text' className='scrollBox'></div>
+      {/* <animated.div
+        style={useSpring({
+          config: { duration: 950 },
+          opacity: 1,
+          transform: 'scale(1)',
+          from: { opacity: 0, transform: 'scale(1.5)' },
+        })}
+      > */}
       <div className='gelkLogo'>
         <img
           className='gelkImageLogo'
@@ -44,6 +53,17 @@ const Index = props => (
       <div className='songButton'>
         <a href='/list'>View Song List</a>
       </div>
+      {/* </animated.div> */}
+      {/* <div className='gelkLogo'>
+        <img
+          className='gelkImageLogo'
+          src='/testNeon.gif'
+          alt='good enough live karaoke neon logo'
+        />
+      </div> */}
+      {/* <div className='songButton'>
+        <a href='/list'>View Song List</a>
+      </div> */}
     </div>
     {/* <div className='chevron'>
       <Link

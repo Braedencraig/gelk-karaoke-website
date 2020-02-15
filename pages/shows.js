@@ -51,15 +51,29 @@ export default class Shows extends React.Component {
                     text-decoration: none;
                     color: #f1f1f1;
                     transition: all 0.4s;
+                    font-size: 20px;
                   }
                   p {
                     text-align: center;
-                    font-size: 22px;
+                    font-size: 18px;
+                    margin: 5% 0;
                   }
 
                   a:hover {
                     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
                       0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
+                  }
+
+                  @media screen and (max-width: 900px) {
+                    a {
+                      font-size: 16px;
+                    }
+                  }
+
+                  @media screen and (max-width: 650px) {
+                    a {
+                      font-size: 14px;
+                    }
                   }
                 `}</style>
               </>
@@ -122,14 +136,13 @@ export default class Shows extends React.Component {
             text-align: left;
             font-size: 28px;
             color: #f1f1f1;
-            min-height: 55vh;
             width: 70%;
-            line-height: 38px;
+            margin-bottom: 50px;
           }
 
           p {
             color: #f1f1f1;
-            font-size: 20px;
+            font-size: 18px;
             display: flex;
             justify-content: center;
           }
@@ -140,7 +153,12 @@ export default class Shows extends React.Component {
 
           @media screen and (max-width: 900px) {
             .shows {
-              font-size: 22px;
+              font-size: 16px;
+              margin-bottom: 40px;
+            }
+
+            h4 {
+              font-size: 16px;
             }
           }
 
@@ -150,14 +168,14 @@ export default class Shows extends React.Component {
             }
 
             p {
-              font-size: 14px;
+              font-size: 16px;
             }
             h4 {
-              font-size: 14px;
+              font-size: 16px;
             }
             .shows {
-              font-size: 16px;
-              width: 85%;
+              font-size: 14px;
+              width: 80%;
               line-height: 22px;
             }
           }
