@@ -32,7 +32,7 @@ const theme = 'black'; // or 'white'
 
 const Index = props => (
   <Layout>
-    <header>
+    <div>
       <div id='text' className='scrollBox'></div>
       <div className='gelkLogo'>
         <img
@@ -44,8 +44,8 @@ const Index = props => (
       <div className='songButton'>
         <a href='/list'>View Song List</a>
       </div>
-    </header>
-    <div className='chevron'>
+    </div>
+    {/* <div className='chevron'>
       <Link
         className='scrollChevron'
         to='text'
@@ -68,13 +68,13 @@ const Index = props => (
           ></path>
         </svg>
       </Link>
-    </div>
+    </div> */}
     <style jsx>{`
 
     .songButton {
       width: 100%;
       text-align: center;
-      margin-bottom: 4%;
+      margin-bottom: 2.5%;
     }
 
     .songButton a {
@@ -104,11 +104,11 @@ const Index = props => (
     }
 
     .gelkLogo {
-      width: 70%;
+      width: 62%;
       margin: 0 auto;
-      margin-top: 3%;
+      margin-top: 3.5%;
       max-width: 1400px;
-      margin-bottom: 2.5%;
+      margin-bottom: 0.5%;
     }
       svg:hover {
         fill: rgba(241,241,241, 0.6);
@@ -146,7 +146,7 @@ const Index = props => (
         width: 94%;
         justify-content: flex-end;
         position: fixed;
-        top: 88vh;
+        top: 92vh;
         z-index: 100;
         transform: scale(1, -1)
       }
