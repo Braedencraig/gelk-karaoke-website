@@ -92,8 +92,8 @@ const Index = props => (
     <style jsx>{`
 
     .songButton {
-      width: 100%;
-      text-align: center;
+      display: flex;
+      justify-content: center;
       margin-bottom: 2.5%;
     }
 
@@ -121,14 +121,15 @@ const Index = props => (
       width: 100%;
       height: auto;
       max-height: 800px;
+      max-width: 750px;
     }
 
     .gelkLogo {
-      width: 62%;
       margin: 0 auto;
       margin-top: 3.5%;
-      max-width: 1400px;
       margin-bottom: 0.5%;
+      display: flex;
+      justify-content: center;
     }
       svg:hover {
         fill: rgba(241,241,241, 0.6);
@@ -185,6 +186,13 @@ const Index = props => (
         bottom: 200px;
       }
       }
+
+            @media screen and (max-width: 1075px) {
+              .gelkLogo {
+                margin-top: 50px;
+              }
+            }
+
     `}</style>
     <>
       {/* <Carousel /> */}
@@ -391,6 +399,48 @@ const Index = props => (
         color: #f1f1f1;
       }
 
+      @media screen and (max-width: 1190px) { 
+       .introText p {
+         font-size: 18px;
+       }
+      }
+
+      @media screen and (max-width: 1087px) {
+        .spotifyAbout {
+          flex-direction: column;
+        }
+
+        .introText {
+          padding: 0;
+        }
+
+        .songButton, .listButton {
+          margin: 30px 0;
+        }
+
+        .songButton {
+          margin-bottom: 50px;
+        }
+
+        .flexOneSide, .flexTwoSide {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        .introText p {
+          padding: 0 5%;
+        }
+
+        .listButton {
+          margin-bottom: 50px;
+        }
+
+
+        
+        
+      }
+
       @media screen and (max-width: 1075px) {
         .introText h2 {
           font-size: 30px;
@@ -405,15 +455,11 @@ const Index = props => (
           line-height: 36px;
         }
 
-        .gelkLogo {
-          margin-top: 33%;
-        }
+       
       }
 
       @media screen and (max-width: 690px) {
-        .gelkLogo {
-          margin-top: 25vh;
-        }
+        
 
         .chevron {
           margin-top: 50px;
@@ -434,20 +480,13 @@ const Index = props => (
       }
 
       @media screen and (max-width: 557px) {
-        svg {
-          width: 30px;
-        }
+      
 
         .introText h2 {
           font-size: 22px;
         }
 
-        .gelkLogo {
-          width: 90%;
-        }
-        .gelkLogo {
-          margin-top: 33vh;
-        }
+        
       }
     `}</style>
   </Layout>

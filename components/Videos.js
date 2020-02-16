@@ -58,6 +58,24 @@ class Videos extends React.Component {
                   width: 100%;
                   height: auto;
                 }
+
+                @media screen and (max-width: 1000px) {
+                  .image-element-class {
+                    width: calc(50% - 40px);
+                    min-width: calc(50% - 40px);
+                    background: rgb(25, 3, 22);
+                    padding: 20px;
+                  }
+                }
+
+                @media screen and (max-width: 600px) {
+                  .image-element-class {
+                    width: calc(100% - 40px);
+                    min-width: calc(100% - 40px);
+                    background: rgb(25, 3, 22);
+                    padding: 20px;
+                  }
+                }
               `}</style>
             </>
           );

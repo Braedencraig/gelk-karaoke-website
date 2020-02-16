@@ -113,7 +113,7 @@ export default class List extends React.Component {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    offset={-250}
+                    offset={-240}
                     isDynamic={true}
                   >
                     <a href={`#${letter}`}>{letter}</a>
@@ -136,7 +136,7 @@ export default class List extends React.Component {
             margin: 0 -5px 0 0;
             letter-spacing: 5px;
             line-height: 1;
-            font-size: 7vw;
+            font-size: 10vw;
             font-family: 'Concert One', sans-serif;
             font-weight: 100;
             text-align: center;
@@ -177,7 +177,7 @@ export default class List extends React.Component {
             flex-wrap: wrap;
             display: flex;
             font-size: 20px;
-            width: 75%;
+            width: 100%;
             padding: 20px 0;
           }
           p {
@@ -193,7 +193,7 @@ export default class List extends React.Component {
             margin: 10px;
             font-family: 'Montserrat', sans-serif;
             color: #f1f1f1;
-            font-size: 28px;
+            font-size: 20px;
           }
 
           a:hover {
@@ -206,7 +206,7 @@ export default class List extends React.Component {
               flex-wrap: wrap;
               display: flex;
               font-size: 20px;
-              width: 75%;
+              width: 100%;
               margin: 50px auto;
               padding: 20px 0;
             }
@@ -235,7 +235,8 @@ export default class List extends React.Component {
 
             p .alphabet,
             a {
-              font-size: 16px;
+              font-size: 18px;
+              margin: 5px;
             }
           }
         `}</style>

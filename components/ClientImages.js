@@ -97,6 +97,18 @@ class ClientImages extends React.Component {
             }
           }
 
+          @media screen and (max-width: 447px) {
+            .flexContainer {
+              width: 70%;
+              margin-top: 150px;
+            }
+
+            .container {
+              display: flex;
+              justify-content: center;
+            }
+          }
+
           @media screen and (max-width: 340px) {
             .flexConatiner {
               margin-top: 175px;

@@ -160,11 +160,12 @@ const TestHeader = _ => {
 
     .navBar {
           transition: background-color 0.2s;
-          background: rgb(229,52,65);
+          background: none;
         }
         .navBar.scrolled {
           background: rgba(229,52,65, 0.98)!important;
           z-index: 300;
+          height: 75px;
         }
 
       .singMan {
@@ -256,6 +257,8 @@ const TestHeader = _ => {
             width: 50px;
             height: 50px;
             margin:0 20px;
+            top: 10px;
+            position: relative;
           }
 
           ul {

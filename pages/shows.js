@@ -105,7 +105,7 @@ export default class Shows extends React.Component {
             margin: 0 -5px 0 0;
             letter-spacing: 5px;
             line-height: 1;
-            font-size: 7vw;
+            font-size: 10vw;
             font-weight: 100;
             text-align: center;
             color: #fee;

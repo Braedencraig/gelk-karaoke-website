@@ -51,7 +51,7 @@ export default class About extends React.Component {
                   width: 80%;
                   margin: 40px auto;
                   max-width: 1400px;
-                  line-height: 38px;
+                  line-height: 28px;
                 }
 
                 @media screen and (max-width: 900px) {
@@ -103,14 +103,14 @@ export default class About extends React.Component {
             margin: 0 -5px 0 0;
             letter-spacing: 5px;
             line-height: 1;
-            font-size: 7vw;
+            font-size: 10vw;
             font-family: 'Concert One', sans-serif;
             font-weight: 100;
             text-align: center;
             color: #fee;
             text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #761f6b,
               0 0 0.5em #761f6b, 0 0 0.1em #761f6b, 0 10px 3px #000;
-            margin-bottom: 80px;
+            margin-bottom: 50px;
             }
 
             .testimonialBottom {

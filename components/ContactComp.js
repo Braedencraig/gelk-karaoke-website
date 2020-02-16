@@ -275,7 +275,7 @@ export default class About extends React.Component {
             }
           }
 
-          @media screen and (max-width: 1015px) {
+          @media screen and (max-width: 1150px) {
             .flex {
               flex-direction: column;
             }
