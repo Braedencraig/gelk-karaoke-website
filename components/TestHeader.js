@@ -230,6 +230,11 @@ const TestHeader = _ => {
         display: none;
       }
 
+      label {
+        z-index: 100;
+        position: relative;
+      }
+
       .wrapper {
         align-items: center;
         display: flex;
@@ -270,6 +275,10 @@ const TestHeader = _ => {
             text-align: center;
             width: 100%;
             visibility: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20px;
           }
 
           li {
@@ -286,6 +295,10 @@ const TestHeader = _ => {
             padding-bottom 100%;
             margin: 0 auto;
             margin-top: -20px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20px;
           }
 
           .label-toggle {
@@ -317,7 +330,7 @@ const TestHeader = _ => {
         }
       }
 
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 800px) {
         ul {
           transition: all 1s ease;
         }

@@ -130,7 +130,7 @@ export default class About extends React.Component {
             color: #f1f1f1;
             font-family: 'Montserrat', sans-serif;
             line-height: 38px;
-            font-size: 20px;
+            font-size: 18px;
           }
 
           a {
@@ -335,12 +335,18 @@ export default class About extends React.Component {
 
           @media only screen and (max-width: 900px) {
             .flexOne p {
-              font-size: 18px;
+              font-size: 17px;
             }
           }
           @media only screen and (max-width: 600px) {
             .flexOne p {
-              font-size: 18px;
+              font-size: 17px;
+              margin-top: 20px;
+            }
+
+            h3 {
+              font-size: 35px;
+              margin-top: 20px;
             }
 
             .title {

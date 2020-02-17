@@ -46,7 +46,7 @@ export default class About extends React.Component {
               <style jsx>{`
                 p {
                   font-family: 'Montserrat', sans-serif;
-                  font-size: 20px;
+                  font-size: 18px;
                   color: #f1f1f1;
                   width: 80%;
                   margin: 40px auto;
@@ -56,13 +56,13 @@ export default class About extends React.Component {
 
                 @media screen and (max-width: 900px) {
                   p {
-                    font-size: 20px;
+                    font-size: 16px;
                   }
                 }
 
                 @media screen and (max-width: 600px) {
                   p {
-                    font-size: 16px;
+                    font-size: 14px;
                   }
 
                   .title {

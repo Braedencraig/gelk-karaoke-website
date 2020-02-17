@@ -45,10 +45,10 @@ class Gallery extends React.Component {
               </div>
               <style jsx>{`
                 .image-element-class {
-                  width: calc(33.3% - 40px);
-                  min-width: calc(33.3% - 40px);
+                  width: calc(33.3% - 20px);
+                  min-width: calc(33.3% - 20px);
                   background: rgb(25, 3, 22);
-                  padding: 20px;
+                  padding: 10px;
                 }
                 img {
                   width: 100%;
@@ -57,19 +57,19 @@ class Gallery extends React.Component {
 
                 @media screen and (max-width: 1000px) {
                   .image-element-class {
-                    width: calc(50% - 40px);
-                    min-width: calc(50% - 40px);
+                    width: calc(50% - 20px);
+                    min-width: calc(50% - 20px);
                     background: rgb(25, 3, 22);
-                    padding: 20px;
+                    padding: 10px;
                   }
                 }
 
                 @media screen and (max-width: 600px) {
                   .image-element-class {
-                    width: calc(100% - 40px);
-                    min-width: calc(100% - 40px);
+                    width: calc(100% - 20px);
+                    min-width: calc(100% - 20px);
                     background: rgb(25, 3, 22);
-                    padding: 20px;
+                    padding: 10px;
                   }
                 }
               `}</style>

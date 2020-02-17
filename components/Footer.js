@@ -39,7 +39,7 @@ class Footer extends React.Component {
             color: #f1f1f1;
             margin: 0 auto;
             font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
+            font-size: 14px;
           }
 
           svg {

@@ -113,7 +113,7 @@ export default class List extends React.Component {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    offset={-240}
+                    offset={-200}
                     isDynamic={true}
                   >
                     <a href={`#${letter}`}>{letter}</a>
@@ -202,7 +202,7 @@ export default class List extends React.Component {
 
           @media screen and (max-width: 1015px) {
             .alphabet {
-              top: 80px;
+              top: 75px;
               flex-wrap: wrap;
               display: flex;
               font-size: 20px;
@@ -226,11 +226,21 @@ export default class List extends React.Component {
             }
           }
 
+          @media screen and (max-width: 800px) {
+            .listWrapper {
+              min-height: 79.33vh;
+            }
+          }
+
           @media screen and (max-width: 700px) {
             p,
             .list {
               font-size: 16px;
               width: 70%;
+            }
+
+            .alphabet {
+              top: 60px;
             }
 
             p .alphabet,

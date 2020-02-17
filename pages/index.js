@@ -193,6 +193,15 @@ const Index = props => (
               }
             }
 
+            @media screen and (max-width: 700px) {
+              .songButton a, .listButton a{
+                font-size: 14px;
+              }
+              .gelkLogo {
+                margin-top: 70px;
+              }
+            }
+
     `}</style>
     <>
       {/* <Carousel /> */}
@@ -387,7 +396,7 @@ const Index = props => (
       .introText p {
         line-height: 38px;
         margin-bottom: 50px;
-        font-size: 20px;
+        font-size: 18px;
         text-align: left;
       }
 
@@ -401,7 +410,7 @@ const Index = props => (
 
       @media screen and (max-width: 1190px) { 
        .introText p {
-         font-size: 18px;
+         font-size: 16px;
        }
       }
 
@@ -457,6 +466,18 @@ const Index = props => (
 
        
       }
+
+      @media screen and (max-width: 700px) {
+        h3 {
+          font-size: 30px;
+        }
+             .listButton a{
+                font-size: 14px;
+              }
+              .introText {
+                font-size: 16px;
+              }
+            }
 
       @media screen and (max-width: 690px) {
         

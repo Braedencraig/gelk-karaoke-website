@@ -99,7 +99,7 @@ export default class About extends React.Component {
             color: #f1f1f1;
             font-family: 'Montserrat', sans-serif;
             line-height: 38px;
-            font-size: 20px;
+            font-size: 18px;
           }
 
           a {
@@ -271,7 +271,7 @@ export default class About extends React.Component {
 
           @media screen and (max-width: 1150px) {
             .flexOne p {
-              font-size: 20px;
+              font-size: 17px;
             }
           }
 
@@ -300,11 +300,19 @@ export default class About extends React.Component {
             h1 {
               font-size: 12vw;
             }
+
+            .flexOne {
+              width: 82%;
+            }
+
+            .flexTwo {
+              width: 76%;
+            }
           }
 
           @media only screen and (max-width: 900px) {
             .flexOne p {
-              font-size: 20px;
+              font-size: 17px;
             }
           }
           @media only screen and (max-width: 600px) {

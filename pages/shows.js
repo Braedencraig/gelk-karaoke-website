@@ -167,6 +167,10 @@ export default class Shows extends React.Component {
               width: 90%;
             }
 
+            h3 {
+              font-size: 8vw;
+            }
+
             p {
               font-size: 16px;
             }
