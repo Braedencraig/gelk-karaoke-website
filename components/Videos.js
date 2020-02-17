@@ -43,8 +43,11 @@ class Videos extends React.Component {
           return (
             <>
               <div className='image-element-class'>
-                <video width='450' height='345' controls>
-                  <source src={videos.fields.file.url} type='video/mp4' />
+                <video width='450' height='345' controls preload='metadata'>
+                  <source
+                    src={`${videos.fields.file.url}#t=0.5`}
+                    type='video/mp4'
+                  />
                 </video>
               </div>
               <style jsx>{`

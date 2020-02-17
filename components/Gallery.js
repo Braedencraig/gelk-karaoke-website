@@ -41,7 +41,7 @@ class Gallery extends React.Component {
           return (
             <>
               <div className='image-element-class'>
-                <img src={pictures.fields.file.url} />
+                <img loading='lazy' src={pictures.fields.file.url} />
               </div>
               <style jsx>{`
                 .image-element-class {

@@ -509,6 +509,13 @@ const Index = props => (
 
         
       }
+
+      @media screen and (max-width: 500px) {
+        .gelkLogo {
+          max-width: 340px;
+          max-height: 300px;
+        }
+      }
     `}</style>
   </Layout>
 );
