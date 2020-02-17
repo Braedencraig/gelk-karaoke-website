@@ -131,6 +131,9 @@ export default class List extends React.Component {
           </div>
         </div>
         <style jsx>{`
+          ::-webkit-scrollbar {
+            display: none;
+          }
           h1 {
             white-space: nowrap;
             margin: 0 -5px 0 0;
@@ -161,7 +164,7 @@ export default class List extends React.Component {
 
           .list {
             font-family: 'Montserrat', sans-serif;
-            width: 600px;
+            max-width: 600px;
             margin: 0 auto;
             text-align: center;
             font-size: 28px;
@@ -177,7 +180,7 @@ export default class List extends React.Component {
             flex-wrap: wrap;
             display: flex;
             font-size: 20px;
-            width: 100%;
+            width: 95%;
             padding: 20px 0;
           }
           p {
