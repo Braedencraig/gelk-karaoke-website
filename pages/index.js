@@ -208,7 +208,7 @@ const Index = props => (
           max-width: 400px;
           max-height: 300px;
           width: 100%;
-          margin-top: 90px;
+          margin-top: 0px;
         }
 
         .songButton {
@@ -222,6 +222,12 @@ const Index = props => (
         }
 
 
+      }
+
+      @media screen and (max-width: 600px) {
+        .gelkLogo {
+          margin-top: 90px;
+        }
       }
 
     `}</style>
