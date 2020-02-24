@@ -533,7 +533,7 @@ const Index = props => (
 
         .introText p {
           line-height: 28px;
-          font-size: 16px;
+          font-size: 15px;
           text-align: center;
           margin-bottom: 30px;
           word-wrap: break-word;
