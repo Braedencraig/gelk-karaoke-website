@@ -271,7 +271,7 @@ const Index = props => (
         <div className='flexTwoSide'>
           <div className='spotify'>
             <SpotifyPlayer
-              uri='spotify:playlist:4QmX44dyzZa6kObYm5jXzS'
+              uri='spotify:playlist:7ISD94RWlccSoeal9Kg51Z'
               size={size}
               view={view}
               theme={theme}
@@ -502,19 +502,19 @@ const Index = props => (
        
       }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 800px) {
         h3 {
           font-size: 30px;
         }
              .listButton a{
-                font-size: 14px;
+                font-size: 22px;
               }
-              .introText {
-                font-size: 16px;
+              .introText p {
+                font-size: 15px;
               }
             }
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 800px) {
         
 
         .chevron {

@@ -335,6 +335,25 @@ const TestHeader = _ => {
         ul {
           transition: all 1s ease;
         }
+
+        ul li a {
+          font-size: 20px;
+        }
+
+        li:first-child {
+          margin-top: 40px;
+        }
+
+        .navBar .flexTwo svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        nav ul a {
+          font-size: 20px;
+        }
+
+       
       }
 
       @media screen and (max-width: 600px) {
@@ -347,6 +366,13 @@ const TestHeader = _ => {
 
         .navBar svg {
           left: 0px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .navBar .flexTwo svg {
+          width: 50px;
+          height: 50px;
         }
 
         .songButton {
