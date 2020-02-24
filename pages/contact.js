@@ -38,9 +38,13 @@ export default class About extends React.Component {
               Ideal for corporate events, team-building, holiday parties, client
               appreciation nights, weddings, birthdays or other personal
               milestones, live band karaoke with Good Enough Live Karaoke is an
-              epic, interactive entertainment experience. We'll make sure your
-              next party or event is completely awesome. Please let us know if
-              you have any questions or would like a quote:{' '}
+              epic, interactive entertainment experience.
+            </p>
+            <p>
+              {' '}
+              We'll make sure your next party or event is completely awesome.
+              Please let us know if you have any questions or would like a
+              quote:{' '}
               <a
                 href='mailto:sing@goodenoughlivekaraoke.com?Subject=Hello%20'
                 target='_top'
@@ -344,6 +348,10 @@ export default class About extends React.Component {
               margin-top: 20px;
             }
 
+            .flexOne {
+              width: 90%;
+            }
+
             h3 {
               font-size: 35px;
               margin-top: 20px;
@@ -351,6 +359,12 @@ export default class About extends React.Component {
 
             .title {
               width: 90%;
+            }
+
+            button {
+              position: relative;
+              left: 5px;
+              margin-top: 50px;
             }
           }
 

@@ -97,10 +97,30 @@ class ClientImages extends React.Component {
             }
           }
 
+          @media screen and (max-width: 600px) {
+            .flexContainer {
+              width: 90%;
+              margin-top: 150px;
+              padding: 25px 0px;
+            }
+
+            .container {
+              margin-bottom: 60px;
+            }
+
+            .clientImages img {
+              max-width: 50px;
+              max-height: 50px;
+            }
+
+            .clientImages {
+              margin: 0px;
+            }
+          }
+
           @media screen and (max-width: 447px) {
             .flexContainer {
-              width: 70%;
-              margin-top: 150px;
+              width: 90%;
             }
 
             .container {

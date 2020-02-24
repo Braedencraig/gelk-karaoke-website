@@ -66,8 +66,8 @@ class Gallery extends React.Component {
 
                 @media screen and (max-width: 600px) {
                   .image-element-class {
-                    width: calc(100% - 20px);
-                    min-width: calc(100% - 20px);
+                    width: calc(50% - 20px);
+                    min-width: calc(50% - 20px);
                     background: rgb(25, 3, 22);
                     padding: 10px;
                   }

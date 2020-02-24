@@ -25,8 +25,8 @@ import {
 
 const size = {
   width: '90%',
-  height: 600,
-  maxHeight: '600px',
+  height: 700,
+  maxHeight: '700px',
 };
 const view = 'list'; // or 'coverart'
 const theme = 'black'; // or 'white'
@@ -120,12 +120,13 @@ const Index = props => (
       display: block;
       width: 100%;
       height: auto;
-      max-height: 800px;
-      max-width: 750px;
     }
 
     .gelkLogo {
       margin: 0 auto;
+      width: 70%;
+      max-width: 800px;
+      max-height: 600px;
       margin-top: 3.5%;
       margin-bottom: 0.5%;
       display: flex;
@@ -202,6 +203,27 @@ const Index = props => (
               }
             }
 
+             @media screen and (max-width: 600px) {
+        .gelkLogo {
+          max-width: 400px;
+          max-height: 300px;
+          width: 100%;
+          margin-top: 90px;
+        }
+
+        .songButton {
+          margin-top: 35px;
+          margin-bottom: 80px;
+        }
+
+        .songButton a {
+          font-size: 22px;
+          border: 5px solid #f1f1f1;
+        }
+
+
+      }
+
     `}</style>
     <>
       {/* <Carousel /> */}
@@ -212,10 +234,14 @@ const Index = props => (
             <p>
               Good Enough Live Karaoke is Toronto's most popular live band
               karaoke experience, letting anyone with the desire and guts to
-              join us on stage, take the mic and sing! Ideal for corporate
-              events, birthday parties and weddings, Good Enough is a live band
-              featuring guitars, bass, keyboards and drums, and a repertoire of
-              over 400 songs spanning genres and eras. Get in touch at{' '}
+              join us on stage, take the mic and sing!{' '}
+            </p>
+
+            <p>
+              Ideal for corporate events, birthday parties and weddings, Good
+              Enough is a live band featuring guitars, bass, keyboards and
+              drums, and a repertoire of over 400 songs spanning genres and
+              eras. Get in touch at{' '}
               <a
                 href='mailto:sing@goodenoughlivekaraoke.com?Subject=Hello%20'
                 target='_top'
@@ -223,10 +249,13 @@ const Index = props => (
                 sing@goodenoughlivekaraoke.com
               </a>{' '}
               to book your event, and follow us on Instagram to see weekly
-              public shows across Ontario. Since 2013, we have played thousands
-              of hours on stage at private and public events with our unique,
-              interactive rock'n'roll experience. It’s a bit terrifying, hugely
-              exhilarating and completely awesome!
+              public shows across Ontario.
+            </p>
+            <p>
+              Since 2013, we have played thousands of hours on stage at private
+              and public events with our unique, interactive rock'n'roll
+              experience. It’s a bit terrifying, hugely exhilarating and
+              completely awesome!
             </p>
           </div>
           <div className='listButton'>
@@ -479,7 +508,7 @@ const Index = props => (
               }
             }
 
-      @media screen and (max-width: 690px) {
+      @media screen and (max-width: 600px) {
         
 
         .chevron {
@@ -491,29 +520,31 @@ const Index = props => (
           margin-bottom: 30px;
         }
 
+        .introText h3 {
+          font-size: 40px;
+          letter-spacing: 1px;
+          text-align: center;
+          padding-left: 5%;
+        }
+
         .introText {
           font-size: 16px;
         }
 
         .introText p {
-          line-height: 32px;
+          line-height: 28px;
+          font-size: 16px;
+          text-align: center;
+          margin-bottom: 30px;
+          word-wrap: break-word;
         }
-      }
 
-      @media screen and (max-width: 557px) {
-      
-
-        .introText h2 {
+        .introText p:last-child {
+          margin-bottom: 50px;
+        }
+        .listButton a {
           font-size: 22px;
-        }
-
-        
-      }
-
-      @media screen and (max-width: 500px) {
-        .gelkLogo {
-          max-width: 340px;
-          max-height: 300px;
+          border: 5px solid #e53441;
         }
       }
     `}</style>

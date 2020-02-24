@@ -242,8 +242,13 @@ export default class List extends React.Component {
               width: 70%;
             }
 
+            .list {
+              width: 90%;
+            }
+
             .alphabet {
               top: 60px;
+              margin: -40px 0px 0px 0px;
             }
 
             p .alphabet,

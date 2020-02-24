@@ -63,10 +63,12 @@ export default class About extends React.Component {
                 @media screen and (max-width: 600px) {
                   p {
                     font-size: 14px;
+                    text-align: center;
                   }
 
                   .title {
                     width: 90%;
+                    margin-bottom: 20px;
                   }
                 }
               `}</style>

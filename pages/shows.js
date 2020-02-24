@@ -168,7 +168,7 @@ export default class Shows extends React.Component {
             }
 
             h3 {
-              font-size: 8vw;
+              font-size: 9vw;
             }
 
             p {
@@ -176,10 +176,11 @@ export default class Shows extends React.Component {
             }
             h4 {
               font-size: 16px;
+              margin: 30px 0px 50px 0px;
             }
             .shows {
-              font-size: 14px;
-              width: 80%;
+              font-size: 16px;
+              width: 90%;
               line-height: 22px;
             }
           }

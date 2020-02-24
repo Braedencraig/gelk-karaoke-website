@@ -144,6 +144,7 @@ const TestHeader = _ => {
       svg {
         fill: #f1f1f1;
         transition: all 0.2s;
+        z-index: 100;
       }
 
       svg:hover {
@@ -335,6 +336,24 @@ const TestHeader = _ => {
           transition: all 1s ease;
         }
       }
+
+      @media screen and (max-width: 600px) {
+        ul li a {
+          font-size: 40px;
+        }
+        li:first-child {
+          margin-top: 70px;
+        }
+
+        .navBar svg {
+          left: 0px;
+        }
+
+        .songButton {
+          margin-top: 36px;
+        }
+      }
+
     `}</style>
     </>
   );
